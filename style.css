@@ -49,7 +49,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .lab-icon {

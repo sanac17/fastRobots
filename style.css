@@ -37,6 +37,8 @@ body {
 /* Labs Section */
 .labs {
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .labs h2 {
@@ -47,20 +49,26 @@ body {
 .lab-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 30px;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .lab-icon {
   text-decoration: none;
   color: #333;
   background: #89CFF0;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .lab-icon:hover {
@@ -69,12 +77,12 @@ body {
 }
 
 .lab-icon i {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .lab-icon p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }

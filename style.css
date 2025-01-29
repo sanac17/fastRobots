@@ -50,7 +50,7 @@ body {
   /* Allow wrapping */
   justify-content: space-evenly;
   /* Ensure even spacing */
-  gap: 20px;
+  gap: 10px;
   /* Maintain consistent spacing */
 }
 

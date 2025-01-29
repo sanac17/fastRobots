@@ -1,88 +1,208 @@
-/* General Styles */
-body {
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Modern CSS Reset and Base Styles */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #b8daf1;
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #2d3748;
+  background: linear-gradient(135deg, #EBF4F8 0%, #b8daf1 100%);
+  text-align: center;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header with gradient and modern shadow */
 .header {
-  background-color: #7dbce7;
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #4a90e2, #357abd);
+  padding: 2.5rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #4a90e2, #64b5f6);
 }
 
 .header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* About Section */
+/* About Section with card design */
 .about {
-  padding: 20px;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  position: relative;
+  display: inline-block;
+}
+
+.about h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4a90e2;
+  border-radius: 2px;
 }
 
 .about p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-/* Labs Section */
+.about p:hover {
+  transform: translateY(-5px);
+}
+
+/* Labs Section with modern cards */
 .labs {
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 3rem 1rem;
 }
 
 .labs h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: #2d3748;
+  position: relative;
+  display: inline-block;
+}
+
+.labs h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4a90e2;
+  border-radius: 2px;
 }
 
 .lab-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 2rem;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 40px;
-  box-sizing: border-box;
+  padding: 0 2rem;
 }
 
 .lab-icon {
   text-decoration: none;
-  color: #333;
-  background: #89CFF0;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: #2d3748;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #4a90e2, #64b5f6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .lab-icon:hover {
-  background-color: #7EB5E2;
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lab-icon:hover::before {
+  transform: scaleX(1);
 }
 
 .lab-icon i {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4a90e2;
+  transition: transform 0.3s ease;
+}
+
+.lab-icon:hover i {
+  transform: scale(1.1);
 }
 
 .lab-icon p {
   margin: 0;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .about h2,
+  .labs h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lab-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
 }

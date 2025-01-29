@@ -47,9 +47,9 @@ body {
 .lab-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 10px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .lab-icon {

@@ -55,9 +55,9 @@ body {
 }
 
 .lab-icon {
-  flex: 0 1 calc(33.333% - 20px);
+  flex: 0 1 calc(33.333% - 10px);
   /* Ensure three icons per row */
-  max-width: calc(33.333% - 20px);
+  max-width: calc(33.333% - 10px);
   /* Prevent overflow */
   display: flex;
   flex-direction: column;

@@ -27,14 +27,16 @@ body {
 }
 
 .sidebar h1 {
-  font-size: 24px;
-  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .sidebar nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .sidebar nav ul li {
@@ -44,10 +46,12 @@ body {
 .sidebar nav ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px 12px;
   border-radius: 4px;
+  display: block;
   transition: background-color 0.3s;
+  text-align: center;
 }
 
 .sidebar nav ul li a:hover {
@@ -59,9 +63,28 @@ body {
   flex: 1;
   padding: 20px;
   background: #fff4d8;
+  overflow-y: auto;
 }
 
 .content h1 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+
+.blog-card {
+  background: #ffe08a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.blog-card p {
+  font-size: 14px;
+  margin: 0;
 }

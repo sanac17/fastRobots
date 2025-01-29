@@ -46,15 +46,10 @@ body {
 
 .lab-icons {
   display: grid;
-  /* Use a grid layout instead of flexbox */
   grid-template-columns: repeat(3, 1fr);
-  /* Ensure 3 icons per row */
-  gap: 20px;
-  /* Add consistent spacing between rows and columns */
+  gap: 5px;
   margin: 0 auto;
-  /* Center the grid container */
-  max-width: 1200px;
-  /* Limit the container width */
+  max-width: 600px;
 }
 
 .lab-icon {

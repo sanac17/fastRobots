@@ -224,9 +224,12 @@
   <section class="task1">
     <h2>Additional 5000-level Tasks</h2>
     <p>
-      The additional task was to test out the microphone on the Artemis board. Whistling/making loud noises showed a
+      The additional task was to test out the performance of the artemis by sending different message sizes to the board
+      and checking the time taken to echo the message back to the python script.. Whistling/making loud noises showed a
       change in the
       frequency reading on the serial monitor output.
+      I also tested the reliability of the system using the SEND_TIME_DATA function and checking to ensure that no data
+      from the array is lost in transmission. As seen, all messages are received by the python script.
     </p>
     <div class="image-container">
       <img src="path/to/your/image.jpg" alt="Time Millis Output" class="task-image">
@@ -240,6 +243,7 @@
       Next, we had to set-up jupyter lab to run the lab code and set-up the necessary configurations to allow the
       artemis board to connect to our laptops. This involved replacing the MAC address and generating a new UUID so that
       our laptops only connect to our board.
+
     </p>
   </section>
 

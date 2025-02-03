@@ -3,7 +3,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
-  background-color: #f7faff;
+  background-color: #dcebf6;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* Header */
@@ -13,6 +15,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 .nav-container {
@@ -23,25 +26,12 @@ body {
   align-items: center;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.home-link {
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-}
-
-.home-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+.header h1 {
+  margin: 0;
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu {
@@ -50,9 +40,9 @@ body {
 }
 
 .nav-menu a {
-  color: black;
+  color: rgb(3, 0, 0);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -64,46 +54,54 @@ body {
   transform: translateY(-2px);
 }
 
-/* About Section */
-.about {
-  padding: 1rem 1rem;
+/* Section Styles */
+section {
+  padding: 2rem 1rem;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #333;
-  margin: 1 rem 0;
+section h2 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
   position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.section-title::after {
+section h2::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 3px;
   background: #4a90e2;
   border-radius: 2px;
 }
 
+/* About Section */
+.about {
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
 .about-container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
+  padding: 1rem;
 }
 
 .profile-image {
   flex-shrink: 0;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #4a90e2;
+  border: 4px solid #4a90e2;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -114,6 +112,9 @@ body {
   transition: transform 0.3s ease;
 }
 
+.profile-image:hover img {
+  transform: scale(1.1);
+}
 
 .about-content {
   flex: 1;
@@ -127,101 +128,75 @@ body {
   margin: 0;
 }
 
-/* Labs Grid Section */
-.labs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Labs Section */
+.labs {
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.lab-card {
+.lab-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.lab-icon {
+  text-decoration: none;
+  color: #2d3748;
   background: white;
+  padding: 1.5rem;
   border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
   transition: all 0.3s ease;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .lab-image {
+  width: 100%;
   height: 200px;
+  margin-bottom: 1rem;
   overflow: hidden;
-  background: #f0f5ff;
+  border-radius: 8px;
 }
 
 .lab-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.lab-content {
-  padding: 1.5rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-
-.lab-content::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background: #e6f0ff;
-  transform: translate(30%, 30%) rotate(-45deg);
-  z-index: 1;
-}
-
-.lab-tag {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.lab-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-  font-weight: 500;
-  z-index: 2;
-}
-
-
-.lab-date {
-  color: #888;
-}
-
-.lab-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.lab-link:hover .lab-card {
+.lab-icon:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Task Section (for Lab pages) */
+.lab-icon p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-top: 0.5rem;
+}
+
+/* Task Sections */
 .task1 {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  border-radius: 12px;
 }
 
 .task1 h2 {
   color: #2d3748;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -259,13 +234,17 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .labs-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .video-container {
+    width: 90%;
+  }
+
+  .task1 h2 {
+    font-size: 1.5rem;
   }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -277,6 +256,15 @@ body {
     gap: 1rem;
   }
 
+  .lab-icons {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  .video-container {
+    width: 90%;
+  }
+
   .about-container {
     flex-direction: column;
     text-align: center;
@@ -285,29 +273,14 @@ body {
   .about-content {
     text-align: center;
   }
-
-  .video-container {
-    width: 90%;
-  }
 }
 
-@media (max-width: 640px) {
-  .labs-grid {
+@media (max-width: 480px) {
+  .lab-icons {
     grid-template-columns: 1fr;
   }
-}
 
-.image-container {
-  margin: 2rem auto;
-  width: 70%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.task-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  section h2 {
+    font-size: 1.5rem;
+  }
 }

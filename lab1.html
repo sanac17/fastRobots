@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="nav-container">
-      <a href="index.html" class="home-link">Lab 1: Artmemis and Bluetooth</a>
+      <a href="lab1.html" class="home-link">Lab 1: Artmemis and Bluetooth</a>
       <nav class="nav-menu">
         <a href="index.html" class="home-link">Home</a>
       </nav>
@@ -36,8 +36,7 @@
     <h2>Prelab Set-up</h2>
     <p>
       To set-up the lab I first downloaded the Arduino IDE and the SparkFun extension. Then I connected to the Artemis
-      Nano board. After that, I ran
-      some of the example code to test
+      Nano board. After that, I ran some of the example code to test
       out uploading and running code on the board. I also got familiar with the Serial Monitor and baud rates.
     </p>
   </section>
@@ -80,25 +79,26 @@
       Task 3 was to test out the temperature sensor on the Artemis board through the AnalogRead() code.
     </p>
     <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/G8pMjR_dBlU" title="YouTube video player"
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/5Tu9XSrgSIc" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
     <p>
       As can be seen in the video, the temperature readings on the serial monitor increase when I put my hand around the
-      sensor on the board and they decrease when I take my hand off the sensor.
+      sensor on the board and are lower when I take my hand off the sensor.
     </p>
   </section>
 
   <section class="task1">
     <h2>Task 4</h2>
     <p>
-      Task 4 was to test out the microphone on the Artemis board. I used on online app to play notes of different
-      frequencies and saw a change in the output on the serial monitor.
+      Task 4 was to test out the microphone on the Artemis board. I used an online video to play notes of different
+      frequencies and checked the output in the serial monitor. As seen in the video, the output shows that the
+      microphone picks up the different frequencies.
     </p>
     <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/G8pMjR_dBlU" title="YouTube video player"
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/ETeEKfMqJ4U" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
@@ -111,15 +111,22 @@
       The additional task was to blink the LED on the artmemis whenever a Middle-C note was played. To achieve this
       code, I combined the sample blink and PDM codes and modified it such that the LED would blink if a frequency equal
       to that of Middle-C is heard. I allowed for small variations by setting the range of detection to 260 to 265 Hz.
-      (Middle-C is generally considered to be 262 Hz). As can be seen in the video, the LED only blinks when a Middle-C
-      is played and not any other note.
+      (Middle-C is generally considered to be around 262 Hz). As can be seen in the video, the LED only blinks when a
+      Middle-C is played and not any other note.
     </p>
     <div class="image-container">
       <img src="./images/middle_c_code.png" alt="Middle-C" class="task-image">
     </div>
 
     <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/38akK0bhHWc" title="YouTube video player"
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/kNQatcruFe0" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/h7mSRK7wIiw" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
@@ -152,7 +159,7 @@
     <h2>ECHO</h2>
     <p>
       Task 1 was to set-up the ECHO command to send a string value from our Python script to the artemis board. For this
-      task I added a prefix to the message echoed back from the artemis, "Robot says".
+      task I added a prefix to the message echoed back from the artemis, "Robot says: ".
     </p>
     <div class="image-container">
       <img src="./images/echo_code.png" alt="Echo code" class="task-image">
@@ -180,8 +187,7 @@
     <p>
       For this task I used the millis() function to generate the current time in milliseconds and send back the int
       value of the time to the computer with a prefix of "T:". The Python code then receives the string and
-      prints out the time in
-      milliseconds.
+      prints out the time in milliseconds.
     </p>
     <div class="image-container">
       <img src="./images/get_time_millis.png" alt="Time Millis Output" class="task-image">
@@ -195,9 +201,11 @@
     <h2>Notfication Handler</h2>
     <p>
       For this task, I set up a function in the Python script called "notification_handler" that
-      automatically receives string data from the board and prints it out. To use the notification handler, the Python
-      starts a notification and sends the required command to the board. The response is received in the
-      notification_handler function.
+      automatically receives string data from the board and prints it out. The notification handler converts the
+      received byte array to a string.
+      To use the notification handler, the Python
+      starts a notification using start_notify() and sends the required command to the board using send_command(). The
+      response is received in the notification_handler function.
     </p>
     <div class="image-container">
       <img src="./images/notif_handler.png" alt="Notif handler" class="task-image">
@@ -211,16 +219,14 @@
   </section>
 
   <section class="task1">
-    <h2>Get time loop</h2>
+    <h2>Get Time Loop</h2>
     <p>
       For this task, I set up a loop in the arduino code that runs for 5 seconds and generate the current time using
       the millis() function at every loop iteration. As soon as the data is generated, it is sent back to the python
       script in the notification_handler and printed out.
       The python code adds each timestamp received to a list and I used the size of this list to count the number of
-      timestamps received. I then used this value to calculate the effective data
-      transfer rate.
-      In 5 seconds, 615 integer
-      timestamps were received. An integer takes 4 bytes.
+      timestamps received. I then used this value to calculate the effective data transfer rate.
+      In 5 seconds, 615 integer timestamps were received. An integer takes 4 bytes.
       Therefore, the effective data transfer rate is (615 * 4) / 5 = 492 bytes/sec
     </p>
 
@@ -236,10 +242,9 @@
     <h2>SEND_TIME_DATA</h2>
     <p>
       Now, instead of sending the timestamps back to the computer as soon as they are generated, I first store all the
-      timestamps
-      in
-      an array. This array is defined globally and set to a size of 1000. I then run a loop for 5 seconds and
-      fill this array with timestamps. Once the array is filled up the data is then sent to the computer all at once.
+      timestamps in an array. This array is defined globally and set to a size of 1000. I then run a loop for 5 seconds
+      and fill this array with the generated timestamps. Once the array is filled up the data is then sent to the
+      computer all at once in bulk.
     </p>
     <div class="image-container">
       <img src="./images/send_time_data.png" alt="Send time data" class="task-image">
@@ -249,10 +254,11 @@
   <section class="task1">
     <h2>GET_TEMP_READINGS</h2>
     <p>
-      This task was similar to the one above but instead of collecting only time data, I also stored the temp data in an
-      array and sent that data back with the time data. I created another global array of size 1000 to store the temp
-      data corresponding to each timestamp. The Python code displayed the data as timestamp * temperature
-      reading.
+      This task was similar to the one above but instead of collecting only time data. I also collected temp data using
+      getTempDegF(), and stored the generated temperatures in another global array of size 1000. This data was then sent
+      back with the time data in bulk. Each temperature reading in the temp array had a corresponding timestamp in the
+      time array.
+      The Python code displayed the data as timestamp * temperature reading.
     </p>
     <div class="image-container">
       <img src="./images/get_temp_readings.png" alt="Temp readings" class="task-image">
@@ -279,18 +285,15 @@
       time and temperature readings are recorded simultaneously, this number is halved to 48,000 data pairs. This number
       would also probably be lesser since the data is transmitted as a string which takes more bytes.
     </p>
-    <div class="image-container">
-      <img src="./images/get_temp_readings.png" alt="Temp readings" class="task-image">
-    </div>
-    <div class="image-container">
-      <img src="./images/temp.png" alt="Temp readings" class="task-image">
-    </div>
   </section>
 
 
   <section class="task1">
     <h2>Additional 5000-level Tasks</h2>
     <p>
+      The additional tasks involved measuring the performance of data transfer between the board and computer by testing
+      out different reply sizes. To test this out, I wrote a loop that sends messages of different byte sizes and
+      calculated the time between sending the message and receiving it.
       The performance data shows that smaller size replies like 5 bytes result in much lower data rates due to the
       significant
       impact of overhead, which could include fixed delays/protocal related delays. Larger reply sizes such as 120
@@ -303,14 +306,15 @@
       from the array is lost in transmission. As seen, all messages are received by the python script.
     </p>
     <div class="image-container">
-      <img src="./images/bytes_vs_time_plot.png" alt="Data rate plot" class="task-image">
-    </div>
-    <div class="image-container">
       <img src="./images/performance_code.png" alt="Time Millis Output" class="task-image">
     </div>
+    <div class="image-container">
+      <img src="./images/bytes_vs_time_plot.png" alt="Data rate plot" class="task-image">
+    </div>
+
   </section>
 
-  <section class="about">
+  <section class="task1">
     <h2>Conclusion</h2>
     <p>
       This lab was very useful in getting familiar with running code on the Artermis board and getting familiar with the

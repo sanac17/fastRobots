@@ -23,7 +23,8 @@
     <h2>Lab Objective</h2>
     <p>
       The purpose of Lab 1, was to get familiar with the Artemis Nano board and set-up the ble-controller to allow
-      communicating with the board via blutooth.
+      communicating with the board via bluetooth. The tasks in this lab also helped in familiarizing me with the various
+      commands/debugging tools available to set-up communication with the robot.
     </p>
   </section>
 
@@ -34,7 +35,8 @@
   <section class="about">
     <h2>Prelab Set-up</h2>
     <p>
-      To set-up the lab I first downloaded the Arduino IDE and connected to the Artemis Nano board. After that, I ran
+      To set-up the lab I first downloaded the Arduino IDE and the SparkFun extension. Then I connected to the Artemis
+      Nano board. After that, I ran
       some of the example code to test
       out uploading and running code on the board. I also got familiar with the Serial Monitor and baud rates.
     </p>
@@ -43,7 +45,7 @@
   <section class="task1">
     <h2>Task 1</h2>
     <p>
-      Task 1 was to run the Blink program on the Artemis board.
+      Task 1 was to run the Blink.io program on the Artemis board.
     </p>
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/thsIobqs1qY" title="Lab 1a Task 1">
@@ -57,7 +59,8 @@
   <section class="task1">
     <h2>Task 2</h2>
     <p>
-      Task 2 was to run the Serial program on the Artemis board.
+      Task 2 was to run the Serial program on the Artemis board to get familiar with serial monitor outputs. This task
+      was to get familiar with UART communication between the board and the computer.
     </p>
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/vA5dKbOVGuE" title="YouTube video player"
@@ -66,15 +69,15 @@
       </iframe>
     </div>
     <p>
-      As can be seen in the video, the serial monitor echoes back the word typed in as input.
+      As can be seen in the video, the serial monitor echoes back the word typed in. For this task I had to change the
+      baud rate to match the one in the code, 115200.
     </p>
   </section>
 
   <section class="task1">
     <h2>Task 3</h2>
     <p>
-      Task 3 was to test out the temperature sensor on the Artemis board. As can be seen in the video, covering the
-      sensor with my hand led to an increase in the temperature reading.
+      Task 3 was to test out the temperature sensor on the Artemis board through the AnalogRead() code.
     </p>
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/G8pMjR_dBlU" title="YouTube video player"
@@ -84,15 +87,15 @@
     </div>
     <p>
       As can be seen in the video, the temperature readings on the serial monitor increase when I put my hand around the
-      board and they decrease when I take my hand off the sensor on the artemis.
+      sensor on the board and they decrease when I take my hand off the sensor.
     </p>
   </section>
 
   <section class="task1">
     <h2>Task 4</h2>
     <p>
-      Task 4 was to test out the microphone on the Artemis board. Whistling/making loud noises showed a change in the
-      frequency reading on the serial monitor output.
+      Task 4 was to test out the microphone on the Artemis board. I used on online app to play notes of different
+      frequencies and saw a change in the output on the serial monitor.
     </p>
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/G8pMjR_dBlU" title="YouTube video player"
@@ -111,6 +114,10 @@
       (Middle-C is generally considered to be 262 Hz). As can be seen in the video, the LED only blinks when a Middle-C
       is played and not any other note.
     </p>
+    <div class="image-container">
+      <img src="./images/middle_c_code.png" alt="Middle-C" class="task-image">
+    </div>
+
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/38akK0bhHWc" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -126,16 +133,18 @@
   <section class="about">
     <h2>Prelab Set-up</h2>
     <p>
-      The set-up for this lab involved setting up a virtual python environment with the nexcessary packages for the lab.
-      Next, we had to set-up jupyter lab to run the lab code and set-up the necessary configurations to allow the
-      artemis board to connect to our laptops. This involved replacing the MAC address and generating a new UUID so that
-      our laptops only connect to our board.
+      The set-up for this lab involved creating a virtual python environment with the necessary packages for the
+      class as well as the codebase for the lab tasks.
+      Next, I set-up jupyter lab to run the lab code and modified the necessary configurations in the connection.yaml
+      file like the MAC address and UUID, to allow the
+      artemis board to connect to my laptop. I generated a random UUID in Python to ensure that
+      my laptops only connect to my board. I then connected my laptop to the board via bluetooth.
     </p>
     <div class="image-container">
-      <img src="./images/macAddr.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/connection.png" alt="connection.yml" class="task-image">
     </div>
     <div class="image-container">
-      <img src="./images/blue_conn.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/blue_conn.png" alt="Bluetooth connection" class="task-image">
     </div>
   </section>
 
@@ -146,7 +155,10 @@
       task I added a prefix to the message echoed back from the artemis, "Robot says".
     </p>
     <div class="image-container">
-      <img src="./images/echo_code.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/echo_code.png" alt="Echo code" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/echo_output.png" alt="Echo code" class="task-image">
     </div>
   </section>
 
@@ -156,7 +168,10 @@
       Task 2 was SEND_THREE_FLOATS, to send 3 floats from the artemis board back to our Python script.
     </p>
     <div class="image-container">
-      <img src="./images/send_two_ints.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/three_floats.png" alt="Send three floats" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/three_floats_python.png" alt="Send three floats" class="task-image">
     </div>
   </section>
 
@@ -164,85 +179,144 @@
     <h2>GET_TIME_MILLIS</h2>
     <p>
       For this task I used the millis() function to generate the current time in milliseconds and send back the int
-      value of the time to the computer. On the Python side, the code receives the string and prints out the time in
+      value of the time to the computer with a prefix of "T:". The Python code then receives the string and
+      prints out the time in
       milliseconds.
     </p>
     <div class="image-container">
       <img src="./images/get_time_millis.png" alt="Time Millis Output" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/get_time_python.png" alt="Time Millis Output" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h2>Notfication Handler</h2>
     <p>
-      For this task, I set up a function in the Python script called "notification_handler" that uses the uuid to
-      automatically receive data from the board and print it out.
+      For this task, I set up a function in the Python script called "notification_handler" that
+      automatically receives string data from the board and prints it out. To use the notification handler, the Python
+      starts a notification and sends the required command to the board. The response is received in the
+      notification_handler function.
     </p>
     <div class="image-container">
-      <img src="path/to/your/image.jpg" alt="Time Millis Output" class="task-image">
+      <img src="./images/notif_handler.png" alt="Notif handler" class="task-image">
     </div>
+    <div class="image-container">
+      <img src="./images/notification.png" alt="Notif handler" class="task-image">
+    </div>
+    <p>
+      This code shows how the notification_handler is used for the GET_TIME_MILLIS command.
+    </p>
   </section>
 
   <section class="task1">
     <h2>Get time loop</h2>
     <p>
       For this task, I set up a loop in the arduino code that runs for 5 seconds and generate the current time using
-      millis() at every loop iteration. As soon as the time is generated, it is sent back to the python script and
-      received and printed out by the notification handler.
-      I used this to calculate the effective data transfer rate. In 5 seconds, 615 integer timestamps were received,
-      which made the effective data transfer rate (615 * 4) / 5 = 492 bytes/sec
+      the millis() function at every loop iteration. As soon as the data is generated, it is sent back to the python
+      script in the notification_handler and printed out.
+      The python code adds each timestamp received to a list and I used the size of this list to count the number of
+      timestamps received. I then used this value to calculate the effective data
+      transfer rate.
+      In 5 seconds, 615 integer
+      timestamps were received. An integer takes 4 bytes.
+      Therefore, the effective data transfer rate is (615 * 4) / 5 = 492 bytes/sec
     </p>
+
     <div class="image-container">
-      <img src="./images/get_time_loop.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/get_time_loop.png" alt="Time loop" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/len_data.png" alt="Time loop" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h2>SEND_TIME_DATA</h2>
     <p>
-      In this task, instead of sending all the timestamps as soon as they were produced, I created an array and put the
-      values in that first in a loop that ran for 5 seconds. Then I looped through the array and sent all the data back
-      at once.
+      Now, instead of sending the timestamps back to the computer as soon as they are generated, I first store all the
+      timestamps
+      in
+      an array. This array is defined globally and set to a size of 1000. I then run a loop for 5 seconds and
+      fill this array with timestamps. Once the array is filled up the data is then sent to the computer all at once.
     </p>
     <div class="image-container">
-      <img src="./images/send_time_data.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/send_time_data.png" alt="Send time data" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h2>GET_TEMP_READINGS</h2>
     <p>
-      This task was similar to the above but instead of collecting only time data, I also stored the temp data in an
-      array and sent that data back with the time data. The Python code displayed the data as timestamp:temperature
+      This task was similar to the one above but instead of collecting only time data, I also stored the temp data in an
+      array and sent that data back with the time data. I created another global array of size 1000 to store the temp
+      data corresponding to each timestamp. The Python code displayed the data as timestamp * temperature
       reading.
     </p>
     <div class="image-container">
-      <img src="./images/get_temp_readings.png" alt="Time Millis Output" class="task-image">
+      <img src="./images/get_temp_readings.png" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/temp.png" alt="Temp readings" class="task-image">
     </div>
   </section>
 
   <section class="task1">
+    <h2>DISCUSSION</h2>
+    <p>
+      The above two methods have their own uses and advantages/disadvantages.
+      The first method enables real-time transfer and use of data from the robot which could be advantageous in
+      situations where real-time analysis is required and where slower data computation would be acceptable. On the
+      other hand, the second method with the array is faster and allows data transfer at a much
+      faster rate than even 1 timestamp per second. By storing the data first and then sending it as a batch, this
+      method avoids the issue of real-time transmission delays and potential data loss. The choice of method will be use
+      case dependent.
+
+      In terms of data storage capacity, the Artemis board has 384 kB of RAM.
+      Since we are sending our data in floats/ints which take 4 bytes each, approx 96000 data points can be stored
+      before the Artemis runs out memory. If both
+      time and temperature readings are recorded simultaneously, this number is halved to 48,000 data pairs. This number
+      would also probably be lesser since the data is transmitted as a string which takes more bytes.
+    </p>
+    <div class="image-container">
+      <img src="./images/get_temp_readings.png" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/temp.png" alt="Temp readings" class="task-image">
+    </div>
+  </section>
+
+
+  <section class="task1">
     <h2>Additional 5000-level Tasks</h2>
     <p>
-      The additional task was to test out the performance of the artemis by sending different message sizes to the board
-      and checking the time taken to echo the message back to the python script.. Whistling/making loud noises showed a
-      change in the
-      frequency reading on the serial monitor output.
+      The performance data shows that smaller size replies like 5 bytes result in much lower data rates due to the
+      significant
+      impact of overhead, which could include fixed delays/protocal related delays. Larger reply sizes such as 120
+      bytes, reduces the impact of this overhead by spreading fixed costs across more data, achieving higher data
+      rates. The plot shown below highlights this trend: as the reply size increases, the effective data rate improves
+      significantly. However, the choice of reply size depends on the trade-off between latency (faster acknowledgments
+      with smaller packets) and throughput (higher efficiency with larger packets). For bulk data transfers, using
+      larger reply sizes would probably be more beneficial to performance.
       I also tested the reliability of the system using the SEND_TIME_DATA function and checking to ensure that no data
       from the array is lost in transmission. As seen, all messages are received by the python script.
     </p>
     <div class="image-container">
-      <img src="path/to/your/image.jpg" alt="Time Millis Output" class="task-image">
+      <img src="./images/bytes_vs_time_plot.png" alt="Data rate plot" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/performance_code.png" alt="Time Millis Output" class="task-image">
     </div>
   </section>
 
   <section class="about">
     <h2>Conclusion</h2>
     <p>
-      The set-up for this lab involved setting up a virtual python environment with the nexcessary packages for the lab.
-      Next, we had to set-up jupyter lab to run the lab code and set-up the necessary configurations to allow the
-      artemis board to connect to our laptops. This involved replacing the MAC address and generating a new UUID so that
-      our laptops only connect to our board.
+      This lab was very useful in getting familiar with running code on the Artermis board and getting familiar with the
+      different methods of interacting with and sending/receiving data between our computer and the robot. This will be
+      very useful in future labs where performance of the robot is crucial and it is important to pick the best method
+      of communication.
 
     </p>
   </section>

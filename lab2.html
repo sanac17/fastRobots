@@ -29,243 +29,248 @@
   </section>
 
   <section class="task1">
-    <h2>Prelab Set-up</h2>
+    <h2>Lab Set-up</h2>
     <p>
       To set-up the lab I first downloaded the SparkFun 9DoF IMU Breakout - ICM 20948 Arduino library. I then connected
       the IMU directly with the Artemis using a QWIIC cable connector. I also made sure to use the I2C port on the IMU.
       To ensure that the IMU is correctly communicating, I ran the Example1_Basics and checked the serial monitor
       output. The ADO_VAL is the value of the last bit of the I2C address. The default value
-      is 1 and represents that the ADR jumper is open, and 0 represents that it is closed.
+      is 1 and represents that the ADR jumper is open, and 0 represents that it is closed. Since our jumper is closed,
+      we set the value to the default of 1.</p>
+    <div class="image-container">
+      <img src="./images/IMU_connect.JPG" alt="Temp readings" class="task-image">
+    </div>
+  </section>
 
-    <section class="task1">
-      <h2>LED Blinking</h2>
-      <p>
-        As a visual indication that the IMU is running, I blinked the LED on board the Artemis 3 times on
-        initialization. As can be seen in the video, once the code is uploaded to the board, the LED blinks thrice
-        before we see any IMU output.
-      </p>
-      <div class="video-container">
-        <iframe width="70%" height="315" src="https://www.youtube.com/embed/QCO3JGwAp78" title="LED Blinking">
-        </iframe>
-      </div>
-      <div class="image-container">
-        <img src="./images/blink_code.png" alt="Temp readings" class="task-image">
-      </div>
-    </section>
+  <section class="task1">
+    <h2>LED Blinking</h2>
+    <p>
+      As a visual indication that the IMU is running, I blinked the LED on board the Artemis 3 times on
+      initialization. As can be seen in the video, once the code is uploaded to the board, the LED blinks thrice
+      before we see any IMU output.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/QCO3JGwAp78" title="LED Blinking">
+      </iframe>
+    </div>
+    <div class="image-container">
+      <img src="./images/blink_code.png" alt="Temp readings" class="task-image">
+    </div>
+  </section>
 
-    <section class="task1">
-      <h2>Analyzing Accelerometer Data</h2>
-      <p>
-        The accelerometer on the IMU measures data in X, Y, Z coordinates. To get the pitch and roll data, we have to
-        perform geometric transformations on the X, Y data. As described in lecture, we use the atan2 function to
-        convert the data using the following formula:
-      </p>
-      <div class="image-container">
-        <img src="./images/pitch_raw_eq.png" alt="Temp readings" class="task-image">
-      </div>
-      <p>
-        I then verified the IMU measurements when held at -90/0/90 degrees. Some of these readings are shown below.
-        It was a little hard to get exact readings, particularly close to 90 and -90 degrees. I was also unable to hold
-        the IMU completely still to get accurate readings.
-      </p>
-      <div class="video-container">
-        <iframe width="70%" height="315" src="https://www.youtube.com/embed/h6SkhR6HiwI" title="90 Degrees">
-        </iframe>
-      </div>
-      <div class="video-container">
-        <iframe width="70%" height="315" src="https://www.youtube.com/embed/ZqbS6J9d6Aw" title="90 Degrees">
-        </iframe>
-      </div>
+  <section class="task1">
+    <h2>Analyzing Accelerometer Data</h2>
+    <p>
+      The accelerometer on the IMU measures data in X, Y, Z coordinates. To get the pitch and roll data, we have to
+      perform geometric transformations on the X, Y data. As described in lecture, we use the atan2 function to
+      convert the data using the following formula:
+    </p>
+    <div class="image-container">
+      <img src="./images/pitch_raw_eq.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      I then verified the IMU measurements when held at -90/0/90 degrees. Some of these readings are shown below.
+      It was a little hard to get exact readings, particularly close to 90 and -90 degrees. I was also unable to hold
+      the IMU completely still to get accurate readings.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/h6SkhR6HiwI" title="90 Degrees">
+      </iframe>
+    </div>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/ZqbS6J9d6Aw" title="90 Degrees">
+      </iframe>
+    </div>
 
-      <div class="image-container">
-        <img src="./images/accel_pitch.png" alt="Temp readings" class="task-image">
-      </div>
-      <div class="image-container">
-        <img src="./images/accel_roll.png" alt="Temp readings" class="task-image">
-      </div>
-      <p>
-        To check the accuracy of the accelerometer and find an
-        appropriate conversion factor, I performed two point calibration: <br>
-        Roll:<br>
-        Reference range: 90 - (-90) = 180<br>
-        Raw range = <br>
-        Corrected Value =<br>
-      </p>
-      <p>
-        Pitch:<br>
-        Reference range: 90 - (-90) = 180<br>
-        Raw range =<br>
+    <div class="image-container">
+      <img src="./images/accel_pitch.png" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/accel_roll.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      To check the accuracy of the accelerometer and find an
+      appropriate conversion factor, I performed two point calibration: <br>
+      Roll:<br>
+      Reference range: 90 - (-90) = 180<br>
+      Raw range = -89.27 - (-89.23) = 178.5 <br>
+      Corrected Value = 90.5<br>
+    </p>
+    <p>
+      Pitch:<br>
+      Reference range: 90 - (-90) = 180<br>
+      Raw range = 90.23 - (-89.99) = 180.22<br>
 
-        Corrected Value =<br>
+      Corrected Value = 89.3<br>
 
-      </p>
-
-
-
-      </p>
-    </section>
-
-    <section class="task1">
-      <h2>Filtering and FFTs</h2>
-      <p>
-        The accelerometer data had quite a lot of noise. To find an appropriate cut-off frequency for a low-pass filter,
-        I performed an FFT on the roll and pitch data respectively. I obtained this data by moving the IMU in such a way
-        as to get an approximate sine curve as reflected in the graphs below.
-        From the FFT, a reasonable cut-off frequency seems to be around 2-5Hz, i.e. most of our frequencies seem to be
-        concentrated in this range.
-      </p>
-      <div class="image-container">
-        <img src="./images/fft_pitch.png" alt="Echo code" class="task-image">
-      </div>
-      <div class="image-container">
-        <img src="./images/fft_roll.png" alt="Echo code" class="task-image">
-      </div>
-      <p>
-        To find \( \alpha \), I used the following formula:
-        \[
-        \alpha = \frac{dt}{dt + RC}
-        \]
-      </p>
-
-      <p>
-        where:
-      </p>
-
-      <ul>
-        <li>\( dt = \frac{1}{\text{sampling_rate}} \)</li>
-        <li>\( RC = \frac{1}{2\pi \cdot \text{cutoff_frequency}} \)</li>
-      </ul>
-
-      <p>
-        From these calculations I get \( \alpha \) = 0.12. I then implemented a low-pass filter as described in
-        lecture using the following formula for the pitch and roll data. The data I used for this analysis was obtained
-        in a similar method as before, with some vibrational noise as well.
-      </p>
-
-      <div class="image-container">
-        <img src="./images/pitch_LPF_code.png" alt="Middle-C" class="task-image">
-      </div>
-      <p>
-        The graphs below show the difference in the filtered vs unfiltered data. As can be seen, the filtered data has a
-        noticeable reduction in noise while maintaining the shape of the unfiltered data. These graphs also show that
-        the calculated \( \alpha \) value is probably accurate for this problem.
-      </p>
-
-      <div class="image-container">
-        <img src="./images/accel_filt_pitch.png" alt="Echo code" class="task-image">
-      </div>
-
-      <div class="image-container">
-        <img src="./images/accel_filt_roll.png" alt="Echo code" class="task-image">
-      </div>
-    </section>
-
-    <section class="task1">
-      <h2>Gyroscope</h2>
-      <p>
-        Next, we worked on the Gyroscope and calculated pitch, roll as well as yaw data. The accelerometer provided does
-        not calculate yaw data so we must obtain this from the gryroscope itself. Again, the gyroscope provides X, Y, Z
-        transitional data. To obtain the required rotational data, I used the formulas as described in lecture.
-      </p>
-      <div class="image-container">
-        <img src="./images/gyro_data.png" alt="Gyro Data" class="task-image">
-      </div>
-      <p>
-        The gyroscope provides rads/s data which must be converted to degrees. Here, dt acts as an integration variable
-        for the data. The gyroscoope data had much lesser noise than the accelerometer data on board, but also showed
-        some drift. The graphs for yaw data is shown below. Increasing the sampling frequency of the data seemed to lead
-        to more drift in the gryroscope data but almost the same amount of noise in the accelerometer data.
-      </p>
-      <div class="image-container">
-        <img src="./images/gyro_raw.png" alt="Gyro Data" class="task-image">
-      </div>
-    </section>
-
-    <section class="task1">
-      <h2>Complementary Filtering</h2>
-      <p>
-        Since the gyroscope data has some drift and the accelerometer data has noise, we can use a complementary filter
-        to combine the data from the two to get a more accurate reading of pitch and roll. For this filter, I used the
-        equations shown in class and used \( \alpha \) = 0.9 initially. I did this since the accelerometer data showed
-        higher accuracy.
-      </p>
-      <p>
-        The graphs below shows the raw and filtered accelerometer and gyroscope data.
-      </p>
-      <div class="image-container">
-        <img src="./images/gyro_pitch_filt.png" alt="Middle-C" class="task-image">
-      </div>
-      <div class="image-container">
-        <img src="./images/gyro_roll_filt.png" alt="Middle-C" class="task-image">
-      </div>
+    </p>
 
 
-    </section>
 
-    <section class="task1">
-      <h2>Speed/Sampling Data</h2>
-      <p>
-        This task focused on speeding up data acquisition and sending/receiving process. My main loop in my arduino code
-        that was sending the data had a bunch of Serial.print statements which I removed. Further, I first stored all
-        the data in global arrays and then sent all the data over in bulk. I also added checks in the main loop to see
-        if the data is ready, and store it in the global arrays when it is. I store the pitch, roll and yaw data as
-        floats which my Python code separates and stores in different arrays. Floats have lesser overhead than double
-        does and seemed to capture the required data variation. Ints would not contain the required number of decimal
-        points for this data. After adding all the suggested optimizations to my code, I was able to receive 1000 data
-        points in 2.6 seconds.
-      </p>
-      <p>
-        There are 384000 bytes on the Artemis and each float value takes up 4 bytes. Therefore, a total of 96,000 data
-        points can be stored. Since we will be sending accelerometer, gyroscope and ToF data, this is a total of 32,000
-        data points. Further, as calculated above my current sampling rate is approx 2.6 seconds. Therefore, 32000 data
-        points would take 83.2 seconds fill up the Artemis.
-      </p>
-      <div class="image-container">
-        <img src="./images/main_loop_data.png" alt="Middle-C" class="task-image">
-      </div>
-      <div class="image-container">
-        <img src="./images/five_sec_data.png" alt="Middle-C" class="task-image">
-      </div>
-      <p>
-        The above code shows how I collect 5 seconds of data in the main loop of the arduino code only when the send
-        flag is set to 1. The Python code receives these values and I have plotted them above.
-      </p>
+    </p>
+  </section>
 
-    </section>
+  <section class="task1">
+    <h2>Filtering and FFTs</h2>
+    <p>
+      The accelerometer data had quite a lot of noise. To find an appropriate cut-off frequency for a low-pass filter,
+      I performed an FFT on the roll and pitch data respectively. I obtained this data by moving the IMU in such a way
+      as to get an approximate sine curve as reflected in the graphs below.
+      From the FFT, a reasonable cut-off frequency seems to be around 2-5Hz, i.e. most of our frequencies seem to be
+      concentrated in this range.
+    </p>
+    <div class="image-container">
+      <img src="./images/fft_pitch.png" alt="Echo code" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/fft_roll.png" alt="Echo code" class="task-image">
+    </div>
+    <p>
+      To find \( \alpha \), I used the following formula:
+      \[
+      \alpha = \frac{dt}{dt + RC}
+      \]
+    </p>
+
+    <p>
+      where:
+    </p>
+
+    <ul>
+      <li>\( dt = \frac{1}{\text{sampling_rate}} \)</li>
+      <li>\( RC = \frac{1}{2\pi \cdot \text{cutoff_frequency}} \)</li>
+    </ul>
+
+    <p>
+      From these calculations I get \( \alpha \) = 0.12. I then implemented a low-pass filter as described in
+      lecture using the following formula for the pitch and roll data. The data I used for this analysis was obtained
+      in a similar method as before, with some vibrational noise as well.
+    </p>
+
+    <div class="image-container">
+      <img src="./images/pitch_LPF_code.png" alt="Middle-C" class="task-image">
+    </div>
+    <p>
+      The graphs below show the difference in the filtered vs unfiltered data. As can be seen, the filtered data has a
+      noticeable reduction in noise while maintaining the shape of the unfiltered data. These graphs also show that
+      the calculated \( \alpha \) value is probably accurate for this problem.
+    </p>
+
+    <div class="image-container">
+      <img src="./images/accel_filt_pitch.png" alt="Echo code" class="task-image">
+    </div>
+
+    <div class="image-container">
+      <img src="./images/accel_filt_roll.png" alt="Echo code" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h2>Gyroscope</h2>
+    <p>
+      Next, we worked on the Gyroscope and calculated pitch, roll as well as yaw data. The accelerometer provided does
+      not calculate yaw data so we must obtain this from the gryroscope itself. Again, the gyroscope provides X, Y, Z
+      transitional data. To obtain the required rotational data, I used the formulas as described in lecture.
+    </p>
+    <div class="image-container">
+      <img src="./images/gyro_data.png" alt="Gyro Data" class="task-image">
+    </div>
+    <p>
+      The gyroscope provides rads/s data which must be converted to degrees. Here, dt acts as an integration variable
+      for the data. The gyroscoope data had much lesser noise than the accelerometer data on board, but also showed
+      some drift. The graphs for yaw data is shown below. Increasing the sampling frequency of the data seemed to lead
+      to more drift in the gryroscope data but almost the same amount of noise in the accelerometer data.
+    </p>
+    <div class="image-container">
+      <img src="./images/gyro_raw.png" alt="Gyro Data" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h2>Complementary Filtering</h2>
+    <p>
+      Since the gyroscope data has some drift and the accelerometer data has noise, we can use a complementary filter
+      to combine the data from the two to get a more accurate reading of pitch and roll. For this filter, I used the
+      equations shown in class and used \( \alpha \) = 0.9 initially. I did this since the accelerometer data showed
+      higher accuracy.
+    </p>
+    <p>
+      The graphs below shows the raw and filtered accelerometer and gyroscope data.
+    </p>
+    <div class="image-container">
+      <img src="./images/gyro_pitch_filt.png" alt="Middle-C" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/gyro_roll_filt.png" alt="Middle-C" class="task-image">
+    </div>
 
 
-    <section class="task1">
-      <h2>Stunt</h2>
-      <p>
-        Lastly, I played around with the robot, running it around to understand how it works and how to get it to do a
-        stunt such as a flip.
-      </p>
-      <div class="video-container">
-        <iframe width="70%" height="315" src="https://www.youtube.com/embed/jxnmxz-yhV4" title="Lab 2 Stunt">
-        </iframe>
-      </div>
+  </section>
 
-    </section>
+  <section class="task1">
+    <h2>Speed/Sampling Data</h2>
+    <p>
+      This task focused on speeding up data acquisition and sending/receiving process. My main loop in my arduino code
+      that was sending the data had a bunch of Serial.print statements which I removed. Further, I first stored all
+      the data in global arrays and then sent all the data over in bulk. I also added checks in the main loop to see
+      if the data is ready, and store it in the global arrays when it is. I store the pitch, roll and yaw data as
+      floats which my Python code separates and stores in different arrays. Floats have lesser overhead than double
+      does and seemed to capture the required data variation. Ints would not contain the required number of decimal
+      points for this data. After adding all the suggested optimizations to my code, I was able to receive 1000 data
+      points in 2.6 seconds.
+    </p>
+    <p>
+      There are 384000 bytes on the Artemis and each float value takes up 4 bytes. Therefore, a total of 96,000 data
+      points can be stored. Since we will be sending accelerometer, gyroscope and ToF data, this is a total of 32,000
+      data points. Further, as calculated above my current sampling rate is approx 2.6 seconds. Therefore, 32000 data
+      points would take 83.2 seconds fill up the Artemis.
+    </p>
+    <div class="image-container">
+      <img src="./images/main_loop_data.png" alt="Middle-C" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/five_sec_data.png" alt="Middle-C" class="task-image">
+    </div>
+    <p>
+      The above code shows how I collect 5 seconds of data in the main loop of the arduino code only when the send
+      flag is set to 1. The Python code receives these values and I have plotted them above.
+    </p>
 
-    <section class="task1">
-      <h2>Conclusion</h2>
-      <p>
-        This lab was very useful in getting familiar with working with IMU data and filters to reduce noise/drifting.
-        It also helped in reinforcing the different methods of interacting with and sending/receiving data between our
-        computer and the robot. This will
-        be
-        very useful in future labs where performance of the robot is crucial and it is important to pick the best method
-        of communication.
-      </p>
-    </section>
+  </section>
 
-    <section class="task1">
-      <h2>References</h2>
-      <p>
-        I used Nidhi Sonwalkar's lab report to check some of my steps. I also got the two-point calibration formula from
-        here. I also reference Daria's work for the last part.
-      </p>
-    </section>
+
+  <section class="task1">
+    <h2>Stunt</h2>
+    <p>
+      Lastly, I played around with the robot, running it around to understand how it works and how to get it to do a
+      stunt such as a flip.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/jxnmxz-yhV4" title="Lab 2 Stunt">
+      </iframe>
+    </div>
+
+  </section>
+
+  <section class="task1">
+    <h2>Conclusion</h2>
+    <p>
+      This lab was very useful in getting familiar with working with IMU data and filters to reduce noise/drifting.
+      It also helped in reinforcing the different methods of interacting with and sending/receiving data between our
+      computer and the robot. This will
+      be
+      very useful in future labs where performance of the robot is crucial and it is important to pick the best method
+      of communication.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>References</h2>
+    <p>
+      I used Nidhi Sonwalkar's lab report to check some of my steps. I also got the two-point calibration formula from
+      here. I also reference Daria's work for the last part.
+    </p>
+  </section>
 
 </body>
 

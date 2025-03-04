@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 4 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab4.html" class="home-link">Lab 4: Motor Drivers and Open Loop Control</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="about">
+    <h2>Lab Objective</h2>
+    <p>
+      The purpose of Lab 4, was to get attach our motor driver controllers to our car and start working on open loop
+      control of our car. The motor drivers will be used to control our car.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>Lab Set-up/Prelab</h2>
+    <p>
+      For the prelab of this class we learnt how to use an oscilloscope and connect our Artemis board to our motor
+      drivers. I also planned out which pins I would use on my artemis board for the two motor drivers and filled in the
+      wiring diagram with color coding.
+    </p>
+    <div class="image-container">
+      <img src="./images/wiring.png" alt="Sensor Addr" class="task-image">
+    </div>
+    <p>
+      Above is the wiring diagram for the two motor drivers. The input and output pins for each motor driver are
+      connected in parallel to eachother to maximize current drawn. The two VIN and GND pins on the motor drivers are
+      connected
+      to each other and then connected to the 850 mAh battery. One of the GND pins on one of the motor drivers is
+      connected to GND on the artemis. For the two input pins on each motor driver, I chose Pin 0, 1 and Pin 3, 5 on the
+      Artemis respectively.
+    </p>
+    <p>
+      The artemis and the motor drivers are connected to different batteries. The artemis uses a 750 mAh battery while
+      the motors use a 850 mAh battery. This allows each component to function independently and not affect each other.
+      Further, the motor drivers require more power than the artemis.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>Task 1: Testing one motor driver </h2>
+    <p> First, I soldered the input/output pins of one of the motor drivers. Then, I supplied power using a DC power
+      source and then tested the oscilloscope output for the driver. The waveform seen on the oscilloscope is seen
+      below. I /</p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/uWKT37_UHiU" title="Lab 2 Stunt">
+      </iframe>
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_connections.jpeg" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/all_connections.jpeg" alt="Temp readings" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h2>Task 2: Testing the Wheels</h2>
+    <p>
+      To start collecting data with the ToF sensors, we downloaded the SparkFun VL53L1X 4m laser distance sensor
+      library. Then we ran the Example05_wire_I2C.ino code, and saw the Artemis scanning the I2C ports to find the
+      sensor. The address of this sensor was found to be 0x29. In the datasheet for the sensor, the address is listed as
+      0x52. However, since the rightmost bit is used to identify if data is read/write, it is ignored. Therefore, 0x52
+      is shifted to the right, resulting in address 0x29.
+    </p>
+    <div class="image-container">
+      <img src="./images/i2c_addr_scan.png" alt="Temp readings" class="task-image">
+    </div>
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>Task 3: Arranging all Components on the Car</h2>
+    <p>
+      The ToF sensor library has 3 available sensor modes: short, long and medium (only available with the Polulu
+      VL53L1X Library). Short mode has a maximum range of 1.3 m and is the least sensitive to ambient light. Medium mode
+      has a maximum range of 3m. Long mode
+      has a maximum range of 4m but is the most sensitive to ambient light. The short mode is more accurate and suffers
+      from lesser sensor noise. For this lab, I chose to use the short mode to test sensor accuracy. I modified the code
+      so that the sensor now uses short mode.
+    </p>
+    <div class="image-container">
+      <img src="./images/dist_mode_code.png" alt="Temp readings" class="task-image">
+    </div>
+
+    <p>
+      Some of the data collected from the sensor:
+    </p>
+    <div class="image-container">
+      <img src="./images/tof_data_1.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_data_2.png" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_data_3.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      To test the accuracy of the sensor I collected data for 6 different distance readings ranging from 10 inches to 60
+      inches. For each
+      distance reading I took 10 data points and then took the mean of those as the final reading. I also calculated the
+      standard deviation of the data for each distance reading.
+    </p>
+    <div class="image-container">
+      <img src="./images/tof_measured_actual.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_accuracy.png" alt="Temp readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_precision.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      Python code used to calculate std. dev and mean:
+    </p>
+    <div class="image-container">
+      <img src="./images/sensor_vals_code.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      I also found the ranging time, which is the time it takes between sensor measurements. I found this value to be
+      around 89 ms.
+    </p>
+    <div class="image-container">
+      <img src="./images/ranging_time.jpeg" alt="Temp readings" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h2>Task 4: Open Loop Control</h2>
+    <p>
+      Now, I connected both the sensors to the breakout board and ran the code again. I had to make sure to use the
+      XSHUT pin to manually set the address of one of the sensors. I chose to set this value to 0x30. Printing to the
+      serial monitor confirms that the two sensors are collecting data separately.
+    </p>
+    <div class="image-container">
+      <img src="./images/both_tof_sensors_code.png" alt="ToF Speed Tests" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/tof_two_addresses.png" alt="ToF Speed Tests" class="task-image">
+    </div>
+
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/uWKT37_UHiU" title="Lab 2 Stunt">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="task1">
+    <h2>Additional 5000 Level Tasks</h2>
+    <h4>analogWrite() frequency</h4>
+    <p>
+      Infrared distance sensors come in several varieties, each with distinct advantages and limitations. Proximity IR
+      sensors use an emitter-receiver pair to detect object presence when the IR beam is interrupted, offering a simple,
+      low-cost solution for applications like garage door safety mechanisms, though they only provide binary detection
+      rather than actual distance measurements. Time-of-Flight (ToF) IR sensors calculate precise distances by measuring
+      how long it takes for emitted IR light to return after bouncing off objects, providing superior accuracy and range
+      but at higher cost and complexity. IR triangulation sensors emit light at an angle and use geometry to determine
+      distance based on where reflected light hits a detector, striking a balance between the simplicity of proximity
+      sensors and the precision of ToF technology, though their accuracy diminishes with increasing distance.
+    </p>
+
+    <h4>Lowest PWM Discussion</h4>
+    <p>
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>Conclusion</h2>
+    <p>
+      This lab was very useful in getting familiar with working with ToF data.
+      It also helped in reinforcing the different methods of interacting with and sending/receiving data using both our
+      sensors. This will
+      be
+      very useful in future labs where being able to get accurate distance readings of obstacles will be crucial for our
+      robot to safely navigate environments.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h2>References</h2>
+    <p>
+      I referenced Nila Narayan and Mikayla Lahr's work for Lab 4.
+    </p>
+  </section>
+
+</body>
+
+</html>

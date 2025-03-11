@@ -38,14 +38,15 @@
       for this lab.
     </p>
     <div class="image-container">
-      <img src="./images/wiring_motor_drivers.png" alt="Sensor Addr" class="task-image">
+      <img src="./images/lab5_send_pidata.png" alt="Sensor Addr" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h3>PID Control Equation</h3>
     <p>
-      For this lab, we will be using the PID control equation to control the position of our robot.
+      For this lab, we will be using the PID control equation to control the position of our robot. I chose to focus on
+      PI control since I wanted to get a good understanding of how P and I effects the movement of the car.
       We use the equation from lecture shown below:
     </p>
     <div class="image-container">
@@ -64,7 +65,8 @@
   <section class="task1">
     <h3>Kp: Proportional Control</h3>
     <p>
-      First, I focussed on P control and finding an appropriate Kp value. Our motor driver has PWM values in the range 0
+      First, I focussed on P control and finding an appropriate Kp value. I kept Ki and Kd 0. Our motor driver has PWM
+      values in the range 0
       to 255. I decided that my car should go a maximum of 2000 mm from the wall at max speed and then begin to slow
       down. Taking scaling into consideration, I wanted a max PWM output of around 100-150. This corresponds to Kp
       values ranging from 0.05 to 0.075.
@@ -72,51 +74,52 @@
       to work on long distance mode since they should be able to detect the wall from 6+ feet away.
     </p>
     <div class="image-container">
-      <img src="./images/forward_car.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab5_p_control_code.png" alt="ToF readings" class="task-image">
     </div>
-
+    <p>
+      Here is a video of my with the Kp value set to 0.05. The corresponding graph show the car stopping and then
+      oscillating near the wall.
+    </p>
   </section>
 
   <section class="task1">
     <h3>Ki: integral Control</h3>
     <p>
-      Next, I added integral control. Integral control helps ounteact steady state error.
-
+      Next, I added integral control. Integral control helps ounteact steady state error. I tested a range of Ki values
+      till I saw good peformance with a KI value of 0.004. A video of the PI controller can be seen below:
     </p>
     <div class="image-container">
-      <img src="./images/components_car.png" alt="ToF Speed Tests" class="task-image">
+      <img src="./images/lab5_KI_code.png" alt="ToF Speed Tests" class="task-image">
+    </div>
+    <p>
+      When implementing integral control, I had to think about the challenge of integrator windup—where persistent
+      errors or sudden
+      large changes can cause the integral term to dominate, creating oscillations and neutralizing proportional
+      control.
+      To prevent this, I limited the integral term to ±200, keeping its maximum PWM contribution to just 2 units. This
+      ensured the proportional term remained the primary control factor.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab5_kp_ki.png" alt="ToF Speed Tests" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h3>Extrapolation</h3>
     <p>
-      Next, I added integral control. Integral control helps ounteact steady state error.
-    </p>
-    <div class="image-container">
-      <img src="./images/components_car.png" alt="ToF Speed Tests" class="task-image">
-    </div>
-  </section>
-
-  <section class="task1">
-    <h3>Additional 5000 Level Tasks</h3>
-    <h4>analogWrite() frequency/PWM discussion</h4>
-    <p>
-      When checking on the oscilloscope, the measured time period was found to be 5.44 ms. This corresponds to a
-      frequency of 183.8 Hz. Since our motor drivers sample at 50 kHz, this should be fast enough for our motors.
-      Experimentally, I found that a PWM value of 40 was found to be low enough to allow the car to move. This PWM value
-      is enough to sustain movement after approx 1.5 seconds.
+      For extrapolation I first checked how fast the ToF sensors collected data vs how fast the PID control loop ran. I
+      noticed that the ToF sensors took around 40 ms to collect data (also tested in Lab 3), and the PID loop produced a
+      new value every 10ms. For periods without TOF readings, I implemented linear extrapolation from the two most
+      recent measurements to approximate the robot's position. This estimation ran during each loop iteration, with
+      actual TOF readings (when available) triggering a PID recalculation that would override the estimate.
     </p>
   </section>
 
   <section class="task1">
     <h3>Conclusion</h3>
     <p>
-      This lab was very demanding in terms of soldering/hardware. I initally had a hard time getting the wheels on my
-      car to spin and realised that my soldered connections were quite weak. Once I had resoldered and reinforced these
-      connections however, I was able to get the wheels to spin much better. I also had an issue where the settings on
-      the DC power supply in the lab was limiting the current my wheels were drawing. However, once I used a different,
-      non current limiting channel the wheels worked much better.
+      This lab was very useful in understanding how I can use the different sensors on board the car to control its
+      movements. It was also nice to play around with different values and really understand how PI control works.
     </p>
   </section>
 

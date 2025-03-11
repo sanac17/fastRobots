@@ -21,15 +21,15 @@
   </header>
 
 
-  <section class="about">
-    <h2>Lab Objective</h2>
+  <section class="task1">
+    <h3>Lab Objective</h3>
     <p>
       The purpose of Lab 2, was to get familiar with the IMU and working with accelerometer and gyroscope data.
     </p>
   </section>
 
   <section class="task1">
-    <h2>Lab Set-up</h2>
+    <h3>Lab Set-up</h3>
     <p>
       To set-up the lab I first downloaded the SparkFun 9DoF IMU Breakout - ICM 20948 Arduino library. I then connected
       the IMU directly with the Artemis using a QWIIC cable connector. I also made sure to use the I2C port on the IMU.
@@ -43,7 +43,7 @@
   </section>
 
   <section class="task1">
-    <h2>LED Blinking</h2>
+    <h3>LED Blinking</h3>
     <p>
       As a visual indication that the IMU is running, I blinked the LED on board the Artemis 3 times on
       initialization. As can be seen in the video, once the code is uploaded to the board, the LED blinks thrice
@@ -59,7 +59,7 @@
   </section>
 
   <section class="task1">
-    <h2>Analyzing Accelerometer Data</h2>
+    <h3>Analyzing Accelerometer Data</h3>
     <p>
       The accelerometer on the IMU measures data in X, Y, Z coordinates. To get the pitch and roll data, we have to
       perform geometric transformations on the X, Y data. As described in lecture, we use the atan2 function to
@@ -106,7 +106,7 @@
   </section>
 
   <section class="task1">
-    <h2>Filtering and FFTs</h2>
+    <h3>Filtering and FFTs</h3>
     <p>
       The accelerometer data had quite a lot of noise. To find an appropriate cut-off frequency for a low-pass filter,
       I performed an FFT on the roll and pitch data respectively. I obtained this data by moving the IMU in such a way
@@ -168,7 +168,7 @@
   </section>
 
   <section class="task1">
-    <h2>Gyroscope</h2>
+    <h3>Gyroscope</h3>
     <p>
       Next, we worked on the Gyroscope and calculated pitch, roll as well as yaw data. The accelerometer provided does
       not calculate yaw data so we must obtain this from the gryroscope itself. Again, the gyroscope provides X, Y, Z
@@ -189,7 +189,7 @@
   </section>
 
   <section class="task1">
-    <h2>Complementary Filtering</h2>
+    <h3>Complementary Filtering</h3>
     <p>
       Since the gyroscope data has some drift and the accelerometer data has noise, we can use a complementary filter
       to combine the data from the two to get a more accurate reading of pitch and roll. For this filter, I used the
@@ -210,7 +210,7 @@
   </section>
 
   <section class="task1">
-    <h2>Speed/Sampling Data</h2>
+    <h3>Speed/Sampling Data</h3>
     <p>
       This task focused on speeding up data acquisition and sending/receiving process. My main loop in my arduino code
       that was sending the data had a bunch of Serial.print statements which I removed. Further, I first stored all
@@ -242,7 +242,7 @@
 
 
   <section class="task1">
-    <h2>Stunt</h2>
+    <h3>Stunt</h3>
     <p>
       Lastly, I played around with the robot, running it around to understand how it works and how to get it to do a
       stunt such as a flip.
@@ -255,7 +255,7 @@
   </section>
 
   <section class="task1">
-    <h2>Conclusion</h2>
+    <h3>Conclusion</h3>
     <p>
       This lab was very useful in getting familiar with working with IMU data and filters to reduce noise/drifting.
       It also helped in reinforcing the different methods of interacting with and sending/receiving data between our
@@ -267,7 +267,7 @@
   </section>
 
   <section class="task1">
-    <h2>References</h2>
+    <h3>References</h3>
     <p>
       I used Nidhi Sonwalkar's lab report to check some of my steps. I also got the two-point calibration formula from
       here. I also reference Daria's work for the last part.

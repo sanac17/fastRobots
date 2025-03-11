@@ -19,8 +19,8 @@
   </header>
 
 
-  <section class="about">
-    <h2>Lab Objective</h2>
+  <section class="task1">
+    <h3>Lab Objective</h3>
     <p>
       The purpose of Lab 1, was to get familiar with the Artemis Nano board and set-up the ble-controller to allow
       communicating with the board via bluetooth. The tasks in this lab also helped in familiarizing me with the various
@@ -29,11 +29,11 @@
   </section>
 
   <section class="task1">
-    <h2>Lab 1A</h2>
+    <h3>Lab 1A</h3>
   </section>
 
   <section class="about">
-    <h2>Prelab Set-up</h2>
+    <h3>Prelab Set-up</h3>
     <p>
       To set-up the lab I first downloaded the Arduino IDE and the SparkFun extension. Then I connected to the Artemis
       Nano board. After that, I ran some of the example code to test
@@ -42,7 +42,7 @@
   </section>
 
   <section class="task1">
-    <h2>Task 1</h2>
+    <h3>Task 1</h3>
     <p>
       Task 1 was to run the Blink.io program on the Artemis board.
     </p>
@@ -56,7 +56,7 @@
   </section>
 
   <section class="task1">
-    <h2>Task 2</h2>
+    <h3>Task 2</h3>
     <p>
       Task 2 was to run the Serial program on the Artemis board to get familiar with serial monitor outputs. This task
       was to get familiar with UART communication between the board and the computer.
@@ -74,7 +74,7 @@
   </section>
 
   <section class="task1">
-    <h2>Task 3</h2>
+    <h3>Task 3</h3>
     <p>
       Task 3 was to test out the temperature sensor on the Artemis board through the AnalogRead() code.
     </p>
@@ -91,7 +91,7 @@
   </section>
 
   <section class="task1">
-    <h2>Task 4</h2>
+    <h3>Task 4</h3>
     <p>
       Task 4 was to test out the microphone on the Artemis board. I used an online video to play notes of different
       frequencies and checked the output in the serial monitor. As seen in the video, the output shows that the
@@ -106,7 +106,7 @@
   </section>
 
   <section class="task1">
-    <h2>Additional 5000-level Tasks</h2>
+    <h3>Additional 5000-level Tasks</h3>
     <p>
       The additional task was to blink the LED on the artmemis whenever a Middle-C note was played. To achieve this
       code, I combined the sample blink and PDM codes and modified it such that the LED would blink if a frequency equal
@@ -134,11 +134,11 @@
   </section>
 
   <section class="task1">
-    <h2>Lab 1B</h2>
+    <h3>Lab 1B</h3>
   </section>
 
   <section class="about">
-    <h2>Prelab Set-up</h2>
+    <h3>Prelab Set-up</h3>
     <p>
       The set-up for this lab involved creating a virtual python environment with the necessary packages for the
       class as well as the codebase for the lab tasks.
@@ -156,7 +156,7 @@
   </section>
 
   <section class="task1">
-    <h2>ECHO</h2>
+    <h3>ECHO</h3>
     <p>
       Task 1 was to set-up the ECHO command to send a string value from our Python script to the artemis board. For this
       task I added a prefix to the message echoed back from the artemis, "Robot says: ".
@@ -170,7 +170,7 @@
   </section>
 
   <section class="task1">
-    <h2>SEND_THREE_FLOATS</h2>
+    <h3>SEND_THREE_FLOATS</h3>
     <p>
       Task 2 was SEND_THREE_FLOATS, to send 3 floats from the artemis board back to our Python script.
     </p>
@@ -183,7 +183,7 @@
   </section>
 
   <section class="task1">
-    <h2>GET_TIME_MILLIS</h2>
+    <h3>GET_TIME_MILLIS</h3>
     <p>
       For this task I used the millis() function to generate the current time in milliseconds and send back the int
       value of the time to the computer with a prefix of "T:". The Python code then receives the string and
@@ -198,7 +198,7 @@
   </section>
 
   <section class="task1">
-    <h2>Notfication Handler</h2>
+    <h3>Notfication Handler</h3>
     <p>
       For this task, I set up a function in the Python script called "notification_handler" that
       automatically receives string data from the board and prints it out. The notification handler converts the
@@ -219,7 +219,7 @@
   </section>
 
   <section class="task1">
-    <h2>Get Time Loop</h2>
+    <h3>Get Time Loop</h3>
     <p>
       For this task, I set up a loop in the arduino code that runs for 5 seconds and generate the current time using
       the millis() function at every loop iteration. As soon as the data is generated, it is sent back to the python
@@ -242,7 +242,7 @@
   </section>
 
   <section class="task1">
-    <h2>SEND_TIME_DATA</h2>
+    <h3>SEND_TIME_DATA</h3>
     <p>
       Now, instead of sending the timestamps back to the computer as soon as they are generated, I first store all the
       timestamps in an array. This array is defined globally and set to a size of 1000. I then run a loop for 5 seconds
@@ -255,7 +255,7 @@
   </section>
 
   <section class="task1">
-    <h2>GET_TEMP_READINGS</h2>
+    <h3>GET_TEMP_READINGS</h3>
     <p>
       This task was similar to the one above but instead of collecting only time data. I also collected temp data using
       getTempDegF(), and stored the generated temperatures in another global array of size 1000. This data was then sent
@@ -272,7 +272,7 @@
   </section>
 
   <section class="task1">
-    <h2>Discussion</h2>
+    <h3>Discussion</h3>
     <p>
       The above two methods have their own uses and advantages/disadvantages.
       The first method enables real-time transfer and use of data from the robot which could be advantageous in
@@ -292,7 +292,7 @@
 
 
   <section class="task1">
-    <h2>Additional 5000-level Tasks</h2>
+    <h3>Additional 5000-level Tasks</h3>
     <p>
       The additional tasks involved measuring the performance of data transfer between the board and computer by testing
       out different reply sizes. To test this out, I wrote a loop that sends messages of different byte sizes and
@@ -318,7 +318,7 @@
   </section>
 
   <section class="task1">
-    <h2>Conclusion</h2>
+    <h3>Conclusion</h3>
     <p>
       This lab was very useful in getting familiar with running code on the Artermis board and getting familiar with the
       different methods of interacting with and sending/receiving data between our computer and the robot. This will be

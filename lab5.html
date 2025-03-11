@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 5 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab5.html" class="home-link">Lab 5: Linear PID control and Linear interpolation</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="task1">
+    <h3>Lab Objective</h3>
+    <p>
+      The purpose of Lab 4, was to get attach our motor driver controllers to our car and start working on open loop
+      control of our car. The motor drivers will be used to control our car.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Lab Set-up/Prelab</h3>
+    <p>
+      For the prelab of this class I set up code that allows bluetooth communication with the robot. I set up two main
+      cases, START_PID and STOP_CAR. The START_PID controls the PID controller and sends this data back to the python
+      script. START_PID sets the required distance from the wall the 3 PID constant values. I decided to use PI control
+      for this lab.
+    </p>
+    <div class="image-container">
+      <img src="./images/wiring_motor_drivers.png" alt="Sensor Addr" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>PID Control Equation</h3>
+    <p>
+      For this lab, we will be using the PID control equation to control the position of our robot.
+      We use the equation from lecture shown below:
+    </p>
+    <div class="image-container">
+      <img src="./images/pid_control_eq.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      The PID equation uses 3 main constants: Kp (proportional constant), KD (derivative constant), and Ki (integral
+      constant). It uses these constants and the error to calculate the new PID input value. The Proportional control
+      adjusts output based on error magnitude, with larger errors causing
+      stronger responses. Integral control accumulates error over time, maintaining correction even when the error
+      momentarily disappears, ensuring steady-state accuracy. Derivative control responds to error rate changes,
+      essentially predicting future behavior—like slowing a robot approaching a wall too quickly.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Kp: Proportional Control</h3>
+    <p>
+      First, I focussed on P control and finding an appropriate Kp value. Our motor driver has PWM values in the range 0
+      to 255. I decided that my car should go a maximum of 2000 mm from the wall at max speed and then begin to slow
+      down. Taking scaling into consideration, I wanted a max PWM output of around 100-150. This corresponds to Kp
+      values ranging from 0.05 to 0.075.
+      i decided to test out a few Kp values, and saw that Kp of 0.05 semmed to work best. I also changed my ToF sensors
+      to work on long distance mode since they should be able to detect the wall from 6+ feet away.
+    </p>
+    <div class="image-container">
+      <img src="./images/forward_car.png" alt="ToF readings" class="task-image">
+    </div>
+
+  </section>
+
+  <section class="task1">
+    <h3>Ki: integral Control</h3>
+    <p>
+      Next, I added integral control. Integral control helps ounteact steady state error.
+
+    </p>
+    <div class="image-container">
+      <img src="./images/components_car.png" alt="ToF Speed Tests" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Extrapolation</h3>
+    <p>
+      Next, I added integral control. Integral control helps ounteact steady state error.
+    </p>
+    <div class="image-container">
+      <img src="./images/components_car.png" alt="ToF Speed Tests" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Additional 5000 Level Tasks</h3>
+    <h4>analogWrite() frequency/PWM discussion</h4>
+    <p>
+      When checking on the oscilloscope, the measured time period was found to be 5.44 ms. This corresponds to a
+      frequency of 183.8 Hz. Since our motor drivers sample at 50 kHz, this should be fast enough for our motors.
+      Experimentally, I found that a PWM value of 40 was found to be low enough to allow the car to move. This PWM value
+      is enough to sustain movement after approx 1.5 seconds.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Conclusion</h3>
+    <p>
+      This lab was very demanding in terms of soldering/hardware. I initally had a hard time getting the wheels on my
+      car to spin and realised that my soldered connections were quite weak. Once I had resoldered and reinforced these
+      connections however, I was able to get the wheels to spin much better. I also had an issue where the settings on
+      the DC power supply in the lab was limiting the current my wheels were drawing. However, once I used a different,
+      non current limiting channel the wheels worked much better.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Nila Narayan and Mikayla Lahr's work for Lab 4.
+    </p>
+  </section>
+
+</body>
+
+</html>

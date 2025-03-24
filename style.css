@@ -299,15 +299,19 @@ body {
 
 .image-container {
   margin: 2rem auto;
-  width: 50%;
+  width: 80%;
   border-radius: 12px;
   overflow: hidden;
+  text-align: center;
+  /* Add this line to center the image within the container */
 }
 
 .task-image {
   width: 75%;
   height: auto;
   display: block;
+  margin: 0 auto;
+  /* Add this line to center the image */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

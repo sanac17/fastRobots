@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab6.html" class="home-link">Lab 7: Kalman Filtering</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="task1">
+    <h3>Lab Objective</h3>
+    <p>
+      The purpose of Lab 6 was to implement a Kalman Filter to speed up our PID controller from Lab 5. The Kalman Filter
+      will help speed up the slow ToF values such that our cars can speed towards the wall as fast as possible, then
+      either stop 1ft from the wall or turn within 2ft.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Estimating Drag and Momentum</h3>
+    <p>
+      A Kalman filter is an algorithm that optimally estimates a system's state by balancing predictions with new
+      measurements. It works by continuously forecasting where a system should be, then adjusting this prediction when
+      actual measurements arrive. The filter intelligently weights each data source based on their estimated
+      reliability,
+      making it particularly effective for noisy environments. Originally developed for space navigation, Kalman filters
+      now power technologies from GPS to autonomous vehicles, providing a computationally efficient way to extract
+      accurate information from imperfect data.
+    </p>
+    <p>
+      The first step in implementing the Kalman Filter involved developing a state space model for our system, which
+      required estimating drag and momentum parameters. To do this, I followed the steps described in the lab
+      handout and drove the car toward a wall at a consistent PWM using a PID controller, while recording
+      Time-of-Flight (ToF) sensor measurements. I chose to use a PWM value of
+      180 which is 70% of the max PWM of 255. From this I got the following graphs:
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_tof_time_graph.png" alt="Sensor Addr" class="task-image">
+    </div>
+    <p>
+      To calculate the velocity I used the following code. I just calculated distance/time at each time step except the
+      first one.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_vel_code.png" alt="Sensor Addr" class="task-image">
+    </div>
+    <p>
+      I then graphed the calculated velocities:
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_vel_graph.png" alt="Sensor Addr" class="task-image">
+    </div>
+
+    <p>
+      The velocity graph was quite noisy as can be seen above. However, by ignoring the beginning noisy section the last
+      few data points show some steady state. By zooming into that part of the graph the steady state velocity of the
+      system was estimated to be around ~230 mm/s. To find the 90% rise time, I plotted the 90% steady state velocity on
+      the graph, which was 207 mm/s, and found the intersection point on the x-axis. This was found to be ~1.2s.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_steady_state_graph.png" alt="Sensor Addr" class="task-image">
+    </div>
+    <p>
+      Using the following equations I found the drag and momentum using the above values.
+    </p>
+    <p>
+      \[ d = \frac{u_{ss}}{\dot{x}_{ss}} \]
+    </p>
+
+    <p>
+      \[ m = \frac{-d \cdot t_{0.9}}{\ln(1 - d \cdot \dot{x}_{ss})} = \frac{-d \cdot t_{0.9}}{\ln(1 - 0.9)}. \]
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_drag_momentum.png" alt="Sensor Addr" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Initializing the Kalman Filter</h3>
+    <p>
+      Next, using the d and m values from above I initialized the A and B matrices for the Kalman Filter.
+    </p>
+    <p>
+      \[
+      A = \begin{bmatrix}
+      0 & 1 \\
+      0 & -d/m
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      0. & 1. \\
+      0. & -1.91882091
+      \end{bmatrix}
+      \]
+    </p>
+
+    <p>
+      \[
+      B = \begin{bmatrix}
+      0 \\
+      1/m
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      0 \\
+      4.41328809
+      \end{bmatrix}.
+      \]
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_A_B_code.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      Next, I found the Ad and Bd matrices. To do this I needed the sampling time of my ToF sensor. For this I used
+      the array
+      of data points collected above that was used to find d and m. I divided the number of data points received by the
+      difference in the timestamps
+      for the first and last data points. Using this, the sampling time was found to be 19.2/28 = 0.6ms. I then just
+      plugged in this number to the equation for Ad and Bd.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_Ad_Bd_code.png" alt="Temp readings" class="task-image">
+    </div>
+    <p>
+      I then initialized our C matrix which represents the states measured which is just x for this case:
+    </p>
+    <p>
+      \[
+      C = \begin{bmatrix}
+      1 \\
+      0
+      \end{bmatrix}
+      \]
+    </p>
+    <p>
+      The last step was to estimate the sensor noise and process noise covariance matrices. I used the same dt value as
+      above. For dx I looked at the datasheet for the ToF sensor, particularly the ranging error for long distance mode
+      which is what I had my ToF sensor set to. From there, I found dx = 25mm. The table used is also shown below:
+    </p>
+    <p>
+      \[ \sigma_1 = \sigma_2 = \sqrt{\frac{10^2}{dt}} = \sqrt{\frac{10^2}{0.06}} \]
+    </p>
+
+    <p>
+      \[ \sigma_3 = dx = 25 \]
+    </p>
+
+
+    <p>
+      \[ \Sigma_u = \begin{bmatrix} \sigma_x^2 & 0 \\ 0 & \sigma_{\dot{x}}^2 \end{bmatrix} = \begin{bmatrix}
+      1666.66666667
+      & 0 \\ 0 & 1666.66666667 \end{bmatrix} \]
+    </p>
+
+    <p>
+      \[ \Sigma_z = \begin{bmatrix} \sigma_x^2 \end{bmatrix} = \begin{bmatrix} 625 \end{bmatrix} \]
+    </p>
+
+    <div class="image-container">
+      <img src="./images/lab7_dist_table.png" alt="Temp readings" class="task-image">
+    </div>
+  </section>
+
+
+  <section class="task1">
+    <h3>Kalman Filter in Python</h3>
+    <p>
+      Once I had all the constants calculated, I moved on to implement the Kalman Filter in Python, using the code
+      provided in the lab handout:
+    </p>
+
+    <div class="image-container">
+      <img src="./images/lab7_KF_code.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      Plotting this data shows a pretty good match between the actual ToF readings and the Kalman Filter outputs.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_KF_output.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      I played around a little with the covariance matrix value to see how increasing/decreasing them affects the filter
+      output. Increasing sensor variance tends to make the filter rely more on our model. For a sigma value of 50, I got
+      the following graph which shows increased reliability on the sensor data.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_KFout_50.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab7_KFout_10.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+    </p>
+  </section>
+
+
+
+
+
+
+  <section class="task1">
+    <h3>Kalman Filter on the Robot</h3>
+    <p>
+      When implementing a PID controller, it's essential to address integrator wind-up, a common issue that occurs when
+      the system can't achieve the commanded output. This happens when your controller demands more than your motors can
+      physically deliver, causing the integral term to grow unnecessarily large.
+      In my orientation control implementation, I've included wind-up protection similar to what I used in distance
+      control. The key idea is to prevent the integral term from accumulating when it can't actually influence the
+      system:
+    </p>
+    <div class="image-container">
+      <img src="./images/lab6_wind_up_arduino.png" alt="ToF readings" class="task-image">
+    </div>
+  </section>
+
+
+
+  <section class="task1">
+    <h3>Conclusion</h3>
+    <p>
+      This lab was very useful in understanding how I can use the IMU for orientation control. I managed to
+      implement orientation control using a PI controller with the IMU's Digital Motion Processor. The proportional
+      term provided immediate response to heading errors, while the integral term proved essential for overcoming motor
+      deadband and eliminating steady-state errors. Anti-windup protection prevented integral saturation, and the DMP's
+      sensor fusion eliminated gyroscope drift.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Stephan Wagner and Mikayla Lahr's work for Lab 7. Further, Jennie Redrovan, Lulu Htutt and I worked
+      on
+      this lab together and collaborated while figuring out the Kalman Filter implementation.
+    </p>
+  </section>
+
+</body>
+
+</html>

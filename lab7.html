@@ -211,7 +211,7 @@
     <h3>Kalman Filter on the Robot</h3>
     <p>
       Next, I implemented the KF Filter on the robot. Since I had only done PI control in lab 5 I first added in D
-      control to my system. I found Kd = 0.5 to be a good value for this. Next, I integrated my KF code into the PID
+      control to my system. I found Kd = 90.0 to be a good value for this. Next, I integrated my KF code into the PID
       loop I had
       used for Lab 5.
     </p>
@@ -229,17 +229,14 @@
     <p>
       Unfortunately, for some reason I was unable to get the KF code working correctly on my robot. I also initially
       thought it was optional so did not have enough time to thoroughly test it out :(. I was struggling to get the PID
-      controller correctly tuned and for some reason it would not stop 1 ft away from the wall. My KF values were
+      controller correctly tuned. My KF values were
       accurately depicting this behaviour though. I was also getting
       some weird
       readings from my ToF sensors where a lot of values seemed to be 0. The graph below shows my KF readings and ToF
       readings vs time.
     </p>
     <div class="image-container">
-      <img src="./images/LAB7_KF_OUTPUTS_WRONG.png" alt="ToF readings" class="task-image">
-    </div>
-    <div class="image-container">
-      <img src="./images/lab7_TOF_values_wrong.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab7_KF_output_robot.png" alt="ToF readings" class="task-image">
     </div>
   </section>
 

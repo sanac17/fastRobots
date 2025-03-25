@@ -211,19 +211,24 @@
     <h3>Kalman Filter on the Robot</h3>
     <p>
       Next, I implemented the KF Filter on the robot. Since I had only done PI control in lab 5 I first added in D
-      control to my system. I found Kd = 90.0 to be a good value for this. Next, I integrated my KF code into the PID
-      loop I had
-      used for Lab 5. A video of the tuned PID controller is shown below:
+      control to my system. I found Kd = 90.0 to be a good value for this. A video of the tuned PID controller is shown
+      below:
     </p>
     <div class="video-container">
       <iframe width="70%" height="315" src="https://www.youtube.com/embed/bqyCJgFINeA" title="Lab 5 Stunt">
       </iframe>
     </div>
+    <p>
+      Next, I integrated my KF code into the PID
+      loop I had
+      used for Lab 5.
+    </p>
     <div class="image-container">
       <img src="./images/lab7_KF_vars.png" alt="ToF readings" class="task-image">
     </div>
     <p>
-      For the KF update function I converted the function given in Python to C. If there is no new sensor measurement
+      For the KF update function I converted the function given in the handout in Python to C. If there is no new sensor
+      measurement
       from the ToF
       sensor, I use the KF to provide a distance value to my PID controller loop. All this code is put in void loop().
     </p>
@@ -232,12 +237,14 @@
     </div>
     <p>
       Unfortunately, for some reason I was unable to get the KF code working correctly on my robot. I also initially
-      thought it was optional so did not have enough time to thoroughly test it out :(. I was struggling to get the PID
-      controller correctly tuned. My KF values were
-      accurately depicting this behaviour though. I was also getting
+      thought this part of the lab was optional so I did not have enough time to thoroughly test it out :(. I was
+      struggling to get the PID
+      controller correctly tuned. Howeverm, the KF outputs were
+      accurately depicting the behaviour my robot was showing and the predictions were consistent with the robot
+      movements. I was also getting
       some weird
-      readings from my ToF sensors where a lot of values seemed to be 0. The graph below shows my KF readings and ToF
-      readings vs time.
+      readings from my ToF sensors and had a lot of 0 values. The graph below shows my KF readings and ToF
+      readings vs time for a run of my controller.
     </p>
     <div class="image-container">
       <img src="./images/lab7_KF_output_robot.png" alt="ToF readings" class="task-image">

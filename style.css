@@ -249,6 +249,8 @@ body {
   width: 70%;
   border-radius: 12px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .video-container iframe {

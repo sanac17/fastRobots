@@ -210,32 +210,34 @@
   <section class="task1">
     <h3>Kalman Filter on the Robot</h3>
     <p>
-      Next, I implemented the KF Filter on the robot. To do this I first integrated my KF code into the PID loop I had
+      Next, I implemented the KF Filter on the robot. Since I had only done PI control in lab 5 I first added in D
+      control to my system. I found Kd = 0.5 to be a good value for this. Next, I integrated my KF code into the PID
+      loop I had
       used for Lab 5.
     </p>
     <div class="image-container">
       <img src="./images/lab7_KF_vars.png" alt="ToF readings" class="task-image">
     </div>
     <p>
-      For the KF code I converted the function given in Python to C. If there is no new sensor measurement from the ToF
+      For the KF update function I converted the function given in Python to C. If there is no new sensor measurement
+      from the ToF
       sensor, I use the KF to provide a distance value to my PID controller loop. All this code is put in void loop().
     </p>
     <div class="image-container">
       <img src="./images/lab7_KF_code_arduino.png" alt="ToF readings" class="task-image">
     </div>
     <p>
-      After making some small adjustments to my initial Kp/Ki values I was able to get pretty good results from
-      my Kalman Filter. Also, for Lab 5 I had only implemented PI control so I added in D control for this lab. I found
-      Kd = 0.5 to be a good value. The
-      graph below shows the KF outputs with the ToF sensor outputs and they match quite well.
+      Unfortunately, for some reason I was unable to get the KF code working correctly on my robot. I also initially
+      thought it was optional so did not have enough time to thoroughly test it out :(. I was struggling to get the PID
+      controller correctly tuned and for some reason it would not stop 1 ft away from the wall but would instead
+      oscillate once it hit the wall. My KF values were accurately depicting this behaviour though. I was also getting
+      some weird
+      readings from my ToF sensors where a lot of values seemed to be 0. The graph below shows my KF readings and ToF
+      readings vs time. The attached video also shows the incorrect behaviour of the PID+KF controller.
     </p>
     <div class="image-container">
-      <img src="./images/lab7_KF_ToF_robot.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab7_incorrect_graph.png" alt="ToF readings" class="task-image">
     </div>
-    <p>
-      The video below shows the PID controller running with the KF predicted values. I did notice that this PID
-      controller runs slightly faster than the one from Lab 5.
-    </p>
   </section>
 
 

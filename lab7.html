@@ -24,7 +24,7 @@
   <section class="task1">
     <h3>Lab Objective</h3>
     <p>
-      The purpose of Lab 6 was to implement a Kalman Filter to speed up our PID controller from Lab 5. The Kalman Filter
+      The purpose of Lab 7 was to implement a Kalman Filter to speed up our PID controller from Lab 5. The Kalman Filter
       will help speed up the slow ToF values such that our cars can speed towards the wall as fast as possible, then
       either stop 1ft from the wall or turn within 2ft.
     </p>
@@ -37,9 +37,7 @@
       measurements. It works by continuously forecasting where a system should be, then adjusting this prediction when
       actual measurements arrive. The filter intelligently weights each data source based on their estimated
       reliability,
-      making it particularly effective for noisy environments. Originally developed for space navigation, Kalman filters
-      now power technologies from GPS to autonomous vehicles, providing a computationally efficient way to extract
-      accurate information from imperfect data.
+      making it particularly effective for noisy environments.
     </p>
     <p>
       The first step in implementing the Kalman Filter involved developing a state space model for our system, which
@@ -190,7 +188,7 @@
       Plotting this data shows a pretty good match between the actual ToF readings and the Kalman Filter outputs.
     </p>
     <div class="image-container">
-      <img src="./images/lab7_KF_output.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab7_KFout_25.png" alt="ToF readings" class="task-image">
     </div>
     <p>
       I played around a little with the covariance matrix value to see how increasing/decreasing them affects the filter
@@ -209,22 +207,35 @@
 
 
 
-
-
-
   <section class="task1">
     <h3>Kalman Filter on the Robot</h3>
     <p>
-      When implementing a PID controller, it's essential to address integrator wind-up, a common issue that occurs when
-      the system can't achieve the commanded output. This happens when your controller demands more than your motors can
-      physically deliver, causing the integral term to grow unnecessarily large.
-      In my orientation control implementation, I've included wind-up protection similar to what I used in distance
-      control. The key idea is to prevent the integral term from accumulating when it can't actually influence the
-      system:
+      Next, I implemented the KF Filter on the robot. To do this I first integrated my KF code into the PID loop I had
+      used for Lab 5.
     </p>
     <div class="image-container">
-      <img src="./images/lab6_wind_up_arduino.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab7_KF_vars.png" alt="ToF readings" class="task-image">
     </div>
+    <p>
+      For the KF code I converted the function given in Python to C. If there is no new sensor measurement from the ToF
+      sensor, I use the KF to provide a distance value to my PID controller loop. All this code is put in void loop().
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_KF_code_arduino.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      After making some small adjustments to my initial Kp/Ki values I was able to get pretty good results from
+      my Kalman Filter. Also, for Lab 5 I had only implemented PI control so I added in D control for this lab. I found
+      Kd = 0.5 to be a good value. The
+      graph below shows the KF outputs with the ToF sensor outputs and they match quite well.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab7_KF_ToF_robot.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      The video below shows the PID controller running with the KF predicted values. I did notice that this PID
+      controller runs slightly faster than the one from Lab 5.
+    </p>
   </section>
 
 
@@ -232,11 +243,9 @@
   <section class="task1">
     <h3>Conclusion</h3>
     <p>
-      This lab was very useful in understanding how I can use the IMU for orientation control. I managed to
-      implement orientation control using a PI controller with the IMU's Digital Motion Processor. The proportional
-      term provided immediate response to heading errors, while the integral term proved essential for overcoming motor
-      deadband and eliminating steady-state errors. Anti-windup protection prevented integral saturation, and the DMP's
-      sensor fusion eliminated gyroscope drift.
+      This lab was very useful in understanding how I can use the Kalman filtering to help improve my PID controller.
+      Implementing the filter in Python first was super helpful in understanding how different parameters of the filter
+      affect the output. It was super cool to see the KF outputs matching up with the actual sensor outputs as well !
     </p>
   </section>
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 8 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab6.html" class="home-link">Lab 8: Stunts! </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="task1">
+    <h3>Lab Objective</h3>
+    <p>
+      The purpose of Lab 8 was to perform a stunt, either a flip or drifting with our cars. I chose to perform a flip
+      with
+      my robot.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>FLipping</h3>
+    <p>
+      A Kalman filter is an algorithm that optimally estimates a system's state by balancing predictions with new
+      measurements. It works by continuously forecasting where a system should be, then adjusting this prediction when
+      actual measurements arrive. The filter intelligently weights each data source based on their estimated
+      reliability,
+      making it particularly effective for noisy environments.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/q2AXxnyI__Q" title="Lab 9 Stunt">
+      </iframe>
+    </div>
+    <p>
+      This is the second flip.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/MoNO32fJU94" title="Lab 9 Stunt">
+      </iframe>
+    </div>
+    <p>
+      The velocity graph was quite noisy as can be seen above. However, by ignoring the beginning noisy section the last
+      few data points show some steady state. By zooming into that part of the graph the steady state velocity of the
+      system was estimated to be around ~230 mm/s. To find the 90% rise time, I plotted the 90% steady state velocity on
+      the graph, which was 207 mm/s, and found the intersection point on the x-axis. This was found to be ~1.2s.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Conclusion</h3>
+    <p>
+      This lab was very useful in understanding how I can use the Kalman filtering to help improve my PID controller.
+      Implementing the filter in Python first was super helpful in understanding how different parameters of the filter
+      affect the output. It was super cool to see the KF outputs matching up with the actual sensor outputs as well ! I
+      hope I can improve on the tuning and get the controller to work better.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Stephan Wagner and Mikayla Lahr's work for Lab 7. Further, Jennie Redrovan, Lulu Htutt and I worked
+      on
+      this lab together and collaborated while figuring out the Kalman Filter implementation.
+    </p>
+  </section>
+
+</body>
+
+</html>

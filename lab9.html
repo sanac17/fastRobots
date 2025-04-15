@@ -24,53 +24,100 @@
   <section class="task1">
     <h3>Lab Objective</h3>
     <p>
-      The purpose of Lab 8 was to perform mapping on an environment in the lab using a PID controller. 
+      The purpose of Lab 9 was to perform mapping on an environment in the lab using a PID controller. Since I was
+      running short on time I did the mappings in a hallway in Rhodes Hall.
     </p>
   </section>
 
   <section class="task1">
-    <h3>Flipping</h3>
+    <h3>PID Controller</h3>
     <p>
-      For this lab I chose to flip my robot. I set-up a case called DO_FLIP in the arduino code in which I send my robot
-      forwards at max PWM for a fixed period of time and then immediately reverse it at max PWM. This proved quite
-      effective in getting my robot to flip. I test ran it a few times and realized that I needed to add some weight to
-      the front of the car to enable it to flip
-      better. I also removed the taped I had put on the wheels of my car (I initially wanted to try the drift) to allow
-      the wheels to gain more traction to initiate the flip. The battery charge level also seemed to affect the flip if
-      the robot did not move fast enough at max PWM.
+      I chose to use option 2 from the lab handout for my orientation control. I set a fixed angle
+      incremet of 24 degrees that looped through the angles from 0 degrees to 360 degrees using my PID orientation
+      control loop. To achieve this I set up a new case in my arduino code called MAPPING. The robot systematically
+      rotates in increments of 24 degrees, using a PID
+      controller with preset gain values of KP=0.8, KI=0.001, KD=0 that I found via calibration, to accurately achieve
+      each target angle within a 5-degree
+      error threshold. At each position, the robot collects 3 distance readings along with timestamps and
+      orientation data from the IMU. I got a total of 45 datapoints over 9 angles. Once the full rotation is complete,
+      all collected data points: time,
+      distance, and yaw measurements—are sent to the Python code via Bluetooth. I then use this data to get the
+      mappings.
     </p>
     <div class="image-container">
-      <img src="./images/lab8_forward.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab9_ble_code1.png" alt="ToF readings" class="task-image">
     </div>
     <div class="image-container">
-      <img src="./images/lab8_backwards.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab9_ble_code2.png" alt="ToF readings" class="task-image">
     </div>
-    <p>
-      This is the first flip. From start to finish it took a total of 3.1 ms.
-    </p>
-    <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/q2AXxnyI__Q" title="Lab 9 Stunt">
-      </iframe>
+    <div class="image-container">
+      <img src="./images/lab9_ble_code3.png" alt="ToF readings" class="task-image">
     </div>
+  </section>
+
+  <section class="task1">
+    <h3>Getting Data</h3>
     <p>
-      This is the second flip. This flip was slightly faster and took 2.7 ms.
-    </p>
-    <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/MoNO32fJU94" title="Lab 9 Stunt">
-      </iframe>
-    </div>
-    <p>
-      This is my final flip which took ____ seconds.
-    </p>
-    <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/EmDlf0Z66HQ" title="Lab 9 Stunt">
-      </iframe>
-    </div>
-    <p>
-      I then sent the forwards and backwards data separately and got the following plots for the 3 flips.
+      I placed the robot at 4 different positions in the hallway and recorded the data at these locations. For each
+      location I plotted the ToF vs yaw values on a polar plot.
     </p>
     <div class="image-container">
-      <img src="./images/lab8_send_data.png" alt="ToF readings" class="task-image">
+      <img src="./images/lab9_graph1.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab9_graph2.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab9_graph3.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab9_graph4.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      Once I had generated the four polar plots, for the next step I used the transformation matrices as described in
+      lecture to convert the polar plots to cartesian coordinates.
+      I had collected data from four positions in the hallways which I labeled as: (0, 0), (0, 3), (0, 6), and (0, 9)
+      feet and
+      used mathematical transformations to convert these raw distance readings into a coherent spatial map. The
+      algorithm applies different transformations based on the angle of each reading – points that should form the left
+      wall are placed farther out (around 6 feet) while the right wall points are positioned closer (about 2 feet),
+      creating an asymmetric hallway with more space on the left side.
+    </p>
+    <div>
+      <h4>Transformation Mathematics</h4>
+      <p>The transformation from polar to Cartesian coordinates involves two key steps:</p>
+
+      <p>First, converting from polar (r, θ) to local Cartesian coordinates:</p>
+      <p>
+        x<sub>local</sub> = r·cos(θ)<br>
+        y<sub>local</sub> = r·sin(θ)
+      </p>
+
+      <p>
+        Then, applying a transformation matrix to convert local coordinates to global map coordinates:
+      </p>
+
+      <p>
+        x<sub>global</sub> = cos(α) * x<sub>local</sub> - sin(α) * y<sub>local</sub> + x<sub>robot</sub><br>
+        y<sub>global</sub> = sin(α) * x<sub>local</sub> + cos(α) * y<sub>local</sub> + y<sub>robot</sub><br>
+      </p>
+
+      <p>
+        where (x<sub>robot</sub>, y<sub>robot</sub>) is the robot's position in the global frame, and α is the robot's
+        orientation.
+      </p>
+
+      <p>In my implementation, I scaled the raw distances (in mm) to feet using the conversion factor:</p>
+      <p>
+        distance (feet) = distance (mm) / 304.8
+      </p>
+    </div>
+    <p>
+      Once this was done I got the following map representing the hallway. I added in lines to the map based on the
+      hallway and got the below visualization.
+    </p>
+    <div class="image-container">
+      <img src="./images/map_with_lines.png" alt="ToF readings" class="task-image">
     </div>
   </section>
 

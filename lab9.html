@@ -38,7 +38,7 @@
       rotates in increments of 24 degrees, using a PID
       controller with preset gain values of KP=0.8, KI=0.001, KD=0 that I found via calibration, to accurately achieve
       each target angle within a 5-degree
-      error threshold. At each position, the robot collects 3 distance readings along with timestamps and
+      error threshold. At each position, the robot collects 5 distance readings along with timestamps and
       orientation data from the IMU. I got a total of 45 datapoints over 9 angles. Once the full rotation is complete,
       all collected data points: time,
       distance, and yaw measurements—are sent to the Python code via Bluetooth. I then use this data to get the
@@ -53,6 +53,30 @@
     <div class="image-container">
       <img src="./images/lab9_ble_code3.png" alt="ToF readings" class="task-image">
     </div>
+    <p>
+      Below is a video showing my PID controller and MAPPING code to control the on-axis turn of my robot.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/qt8cOJj8d8s" title="Lab 9 Stunt">
+      </iframe>
+    </div>
+    <p>
+      When analyzing mapping errors in a 4x4m room with the robot turning in the center, I found average errors of
+      approximately 15-18cm at room boundaries. My experimental data showed variations of about 50mm for objects within
+      1000mm, increasing to 100-300mm at longer distances. With the robot maintaining position within a 1-foot square
+      and
+      yaw accuracy within 4 degrees (averaging 2 degrees), maximum errors would likely reach 30-45cm at room corners
+      (2.8m
+      from center). In this scenario, I would expect worst-case measurement errors around 450mm for the farthest points,
+      but average errors closer to 150mm. Using DMP-reported yaw values rather than setpoints helped minimize these
+      errors
+      in my implementation.
+    </p>
+    <p>
+      I was initially having some issues with the DMP wraparound problem. To fix this I had to change my angle loop to
+      increment through angles from -180 to 180 degrees due to the DMP's cut-off at 180. I also had to just the error
+      calculation (target_angle) - (current_angle) so that it
+    </p>
   </section>
 
   <section class="task1">
@@ -83,48 +107,66 @@
       wall are placed farther out (around 6 feet) while the right wall points are positioned closer (about 2 feet),
       creating an asymmetric hallway with more space on the left side.
     </p>
-    <div>
-      <h4>Transformation Mathematics</h4>
-      <p>The transformation from polar to Cartesian coordinates involves two key steps:</p>
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 700px;">
+      <h2>Transformation Mathematics</h2>
 
-      <p>First, converting from polar (r, θ) to local Cartesian coordinates:</p>
+      <p>The transformation from <strong>polar</strong> to <strong>Cartesian</strong> coordinates involves two main
+        steps:</p>
+
+      <h3>1. Convert Polar to Local Cartesian Coordinates</h3>
+      <p>Given a point in polar coordinates <em>(r, θ)</em>, the local Cartesian coordinates are:</p>
       <p>
-        x<sub>local</sub> = r·cos(θ)<br>
-        y<sub>local</sub> = r·sin(θ)
+        <code>x<sub>local</sub> = r · cos(θ)</code><br>
+        <code>y<sub>local</sub> = r · sin(θ)</code>
       </p>
 
+      <h3>2. Transform Local to Global Map Coordinates</h3>
       <p>
-        Then, applying a transformation matrix to convert local coordinates to global map coordinates:
+        Apply a transformation matrix to convert local coordinates to global coordinates using the robot's position and
+        orientation <em>(x<sub>robot</sub>, y<sub>robot</sub>, α)</em>:
+      </p>
+      <p>
+        <code>x<sub>global</sub> = cos(α) · x<sub>local</sub> - sin(α) · y<sub>local</sub> + x<sub>robot</sub></code><br>
+        <code>y<sub>global</sub> = sin(α) · x<sub>local</sub> + cos(α) · y<sub>local</sub> + y<sub>robot</sub></code>
       </p>
 
+      <h3>3. Scale Distance Units</h3>
       <p>
-        x<sub>global</sub> = cos(α) * x<sub>local</sub> - sin(α) * y<sub>local</sub> + x<sub>robot</sub><br>
-        y<sub>global</sub> = sin(α) * x<sub>local</sub> + cos(α) * y<sub>local</sub> + y<sub>robot</sub><br>
+        To convert distances from millimeters to feet:
       </p>
-
-      <p>
-        where (x<sub>robot</sub>, y<sub>robot</sub>) is the robot's position in the global frame, and α is the robot's
-        orientation.
-      </p>
-
-      <p>In my implementation, I scaled the raw distances (in mm) to feet using the conversion factor:</p>
-      <p>
-        distance (feet) = distance (mm) / 304.8
-      </p>
+      <p><code>distance (feet) = distance (mm) / 304.8</code></p>
     </div>
     <p>
       Once this was done I got the following map representing the hallway. I added in lines to the map based on the
-      hallway and got the below visualization.
+      hallway and got the below visualizations.
     </p>
     <div class="image-container">
+      <img src="./images/lab9_map_no_Lines.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
       <img src="./images/map_with_lines.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab9_python_code.png" alt="ToF readings" class="task-image">
     </div>
   </section>
 
   <section class="task1">
     <h3>Conclusion</h3>
     <p>
-      This lab was quite fun and I enjoyed flipping my robot.
+      Overall, this lab provided valuable insights into robotic mapping techniques. By implementing a PID controller for
+      orientation control and collecting TOF sensor readings, I was able to successfully generate a
+      spatial representation of a hallway. I also was able to gain a better understanding of polar coordinates
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Stephan Wagner work for Lab 8. Further, Jennie Redrovan, Lulu Htutt and I worked
+      on
+      this lab together and collaborated while figuring out the Kalman Filter implementation. Aidan Derocher was also
+      very helpful with debugging some issues.
     </p>
   </section>
 

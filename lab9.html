@@ -21,6 +21,9 @@
   </header>
 
 
+
+
+
   <section class="task1">
     <h3>Lab Objective</h3>
     <p>
@@ -75,7 +78,12 @@
     <p>
       I was initially having some issues with the DMP wraparound problem. To fix this I had to change my angle loop to
       increment through angles from -180 to 180 degrees due to the DMP's cut-off at 180. I also had to just the error
-      calculation (target_angle) - (current_angle) so that it
+      calculation (target_angle) - (current_angle), it was important to
+      cap the error_ori between 180 and -180 degrees because angles wrap around in a circular fashion. Without this cap,
+      if the robot is at 175 degrees and needs to turn to -175 degrees, it would calculate an error of 350 degrees and
+      make a nearly full rotation instead of the shorter 10-degree turn in the opposite direction. Implementing these
+      bounds ensures the robot always takes the most efficient path when correcting its orientation, preventing
+      unnecessary rotations and improving both energy efficiency and control accuracy.
     </p>
   </section>
 

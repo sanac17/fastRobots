@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 10 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab9.html" class="home-link">Lab 10: Localization (Simulation)</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="task1">
+    <h3>Lab Objective/Prelab</h3>
+    <p>
+      The purpose of this lab is to implement grid localization using a Bayes filter in a simulation environment.
+      Before starting work on Lab 10 I went through the lecture slides to familiarize myself better with how the Baye's
+      filter works and why it is beneficial for our situation.
+      The Baye's filter consists of 2 main steps: a prediction step and an update step. It takes a prior belief
+      distribution bel(x_{t-1}), control input u_t, and measurement z_t to calculate the posterior belief distribution
+      bel(x_t) about the current state. Line 3 performs the prediction step by calculating the belief before
+      incorporating measurements, while line 4 performs the update step by incorporating the measurement likelihood and
+      normalizing the distribution with factor η.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_bayes.png" alt="ToF readings" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Implementation</h3>
+    <p>
+      To implement the Baye's filter in the simulation environment, we had to complete the 5 main functions for the
+      prediction and update steps.
+    </p>
+    <h4>Function 1: compute_control()</h4>
+    <p>
+      The first function to implement was compute_control. This function takes in a current position and a previous
+      position and calculates the 3 main odometry control values: rotation_1, translation and rotation_2. I used the
+      equations given in the lecture slides to compute these values from the given positions. I also had to make sure to
+      normalize the two rotations so that they are within the -180 to 180 deg range.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_1_eqs.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab10_compute_control.png" alt="ToF readings" class="task-image">
+    </div>
+    <h4>Function 2: odom_motion_model()</h4>
+    <p>
+      The second function to implement was odom_motion_model. This function takes in a current position, a previous
+      position and a control input u. The output of this function is the probability of each parameter, calculated as
+      a Gaussian distributions with mean from u. The function first extracts each of the 3 parameters using
+      compute_control(), and then uses loc.gaussian() to calculate their probabilities.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_probs.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab10_odom_mot.png" alt="ToF readings" class="task-image">
+    </div>
+    <h4>Function 3: prediction_step()</h4>
+    <p>
+      The third function to implement was prediction_step(). This function takes in two parameters, the current and
+      previous odometry parameters. It first calculates the control variable u using computer_control(). 
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_pred_step.png" alt="ToF readings" class="task-image">
+    </div>
+    <h4>Function 4: sensor_model()</h4>
+    <p>
+      The second function to implement was odom_motion_model. This function takes in a current position and a previous
+      position and calculates P(z|x), which is the probability that the robot performed a particular action given the
+      current and previous pose. For the implementation, I calculated the 3 probabilities as given in the lecture
+      slides. The product of these probabilities is the final output.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_sensor_model.png" alt="ToF readings" class="task-image">
+    </div>
+    <h4>Function 5: update_step()</h4>
+    <p>
+      The second function to implement was odom_motion_model. This function takes in a current position and a previous
+      position and calculates P(z|x), which is the probability that the robot performed a particular action given the
+      current and previous pose. For the implementation, I calculated the 3 probabilities as given in the lecture
+      slides. The product of these probabilities is the final output.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab10_updaye.png" alt="ToF readings" class="task-image">
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Running the Simulation</h3>
+    <p>
+      Lastly, I ran 2 iterations of the simulation using the Baye's Filter.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" rc="https://www.youtube.com/embed/2mfgjVPSd00" title="Lab 10 1">
+      </iframe>
+    </div>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/ZfCASNouxuY" title="Lab 9 Stunt">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="task1">
+    <h3>Conclusion</h3>
+    <p>
+      Overall, this lab provided valuable insights into robotic mapping techniques. By implementing a PID controller for
+      orientation control and collecting TOF sensor readings, I was able to successfully generate a
+      spatial representation of a hallway. I also was able to gain a better understanding of polar coordinates and
+      transformation matrices.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Stephan Wagner and Mikayla's work for Lab 10.
+    </p>
+  </section>
+
+
+</body>
+
+</html>

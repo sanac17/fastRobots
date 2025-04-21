@@ -60,8 +60,11 @@
     <p>
       The second function to implement was odom_motion_model. This function takes in a current position, a previous
       position and a control input u. The output of this function is the probability of each parameter, calculated as
-      a Gaussian distributions with mean from u. The function first extracts each of the 3 parameters using
-      compute_control(), and then uses loc.gaussian() to calculate their probabilities.
+      a Gaussian distributions with mean from u, which is essentially p(x'|x, u). This is just the probability of a
+      state given a prior state and action. The function first extracts each of the 3 model
+      parameters by calling
+      compute_control(). Then we use loc.gaussian() to calculate each individual parameter probability. The output is
+      just these 3 probabilities multiplied.
     </p>
     <div class="image-container">
       <img src="./images/lab10_probs.png" alt="ToF readings" class="task-image">
@@ -72,27 +75,39 @@
     <h4>Function 3: prediction_step()</h4>
     <p>
       The third function to implement was prediction_step(). This function takes in two parameters, the current and
-      previous odometry parameters. It first calculates the control variable u using computer_control(). 
+      previous odometry parameters. It performs the predict step of the Baye's filter.
+      It first calculates the control variable u using computer_control() then initializes a new belief loc.bel_bar to
+      0. It loops over every possible prior cell (x,y,θ) with non-negligible belief, defined by
+      a probability threshold (as said in the lab handout I chose a threshold of 0.0001), and every possible new
+      cell (x',y',θ'). It then converts both grid indices into real poses via the mapper, and uses the odometry motion
+      model to compute the likelihood of moving from (x,y,θ) to (x',y',θ') given u.
+      Each of these transition probabilities is weighted by the old belief at (x,y,θ) and
+      accumulated into
+      bel_bar[x',y',θ']. Finally, I normalized bel_bar so that the total probability sums to one.
     </p>
     <div class="image-container">
       <img src="./images/lab10_pred_step.png" alt="ToF readings" class="task-image">
     </div>
+    <p>
+      This step of the Baye's filter can be highly computationally inefficient since it loops through all the possible
+      cells. Therefore, to reduce computation we set a threshold and only loop through all prior cells with a certain
+      threshold of belief.
+    </p>
     <h4>Function 4: sensor_model()</h4>
     <p>
-      The second function to implement was odom_motion_model. This function takes in a current position and a previous
-      position and calculates P(z|x), which is the probability that the robot performed a particular action given the
-      current and previous pose. For the implementation, I calculated the 3 probabilities as given in the lecture
-      slides. The product of these probabilities is the final output.
+      The fourth function to implement was sensor_model(). This function takes in one parameter, the true observations
+      of the robot in the map for a particular pose. It then outputs p(z|x), which is the probability of the given
+      oberservation given a current state. I used loc.gaussian() to calculate each probability using the observation
+      data as the mean.
     </p>
     <div class="image-container">
       <img src="./images/lab10_sensor_model.png" alt="ToF readings" class="task-image">
     </div>
     <h4>Function 5: update_step()</h4>
     <p>
-      The second function to implement was odom_motion_model. This function takes in a current position and a previous
-      position and calculates P(z|x), which is the probability that the robot performed a particular action given the
-      current and previous pose. For the implementation, I calculated the 3 probabilities as given in the lecture
-      slides. The product of these probabilities is the final output.
+      The last function is the update_step() of the Baye's filter. This function loops over the grid for the
+      current states and uses the sensor_model() function to retrieve the probability array. This probability value is
+      then used to update loc.bel. Finally, I normalized bel so that the total probability sums to one.
     </p>
     <div class="image-container">
       <img src="./images/lab10_updaye.png" alt="ToF readings" class="task-image">
@@ -102,14 +117,19 @@
   <section class="task1">
     <h3>Running the Simulation</h3>
     <p>
-      Lastly, I ran 2 iterations of the simulation using the Baye's Filter.
+      Lastly, I ran 2 iterations of the simulation using the Baye's Filter. The blue
+      line represents the Baye's filter belief, the green line the ground truth and the red line is the odometry
+      measurements. Comparing the Baye's filter output to the simple odometry model shows that the Baye's filter
+      performs much better.
     </p>
+    <h4>Run without Baye's Filter</h4>
     <div class="video-container">
-      <iframe width="70%" height="315" rc="https://www.youtube.com/embed/2mfgjVPSd00" title="Lab 10 1">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/bWG9reUjzFo" title="Lab 10 1">
       </iframe>
     </div>
+    <h4>Run with Baye's Filter</h4>
     <div class="video-container">
-      <iframe width="70%" height="315" src="https://www.youtube.com/embed/ZfCASNouxuY" title="Lab 9 Stunt">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/GxrZLkHjNfo" title="Lab 9 Stunt">
       </iframe>
     </div>
   </section>
@@ -117,10 +137,7 @@
   <section class="task1">
     <h3>Conclusion</h3>
     <p>
-      Overall, this lab provided valuable insights into robotic mapping techniques. By implementing a PID controller for
-      orientation control and collecting TOF sensor readings, I was able to successfully generate a
-      spatial representation of a hallway. I also was able to gain a better understanding of polar coordinates and
-      transformation matrices.
+      Overall, this lab provided valuable insights into robotic localization techniques and Baye's filter.
     </p>
   </section>
 

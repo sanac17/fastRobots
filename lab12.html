@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 12 - ECE 5160: Fast Robots</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="lab12.html" class="home-link">Lab 12: Path Planning and Execution</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="home-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="task1">
+    <h3>Lab Objective/Prelab</h3>
+    <p>
+      The purpose of this lab was to design a system so that our robots can navigate through the map following a set of
+      waypoints as quickly and accurately as possible.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Chosen design</h3>
+    <p>
+      I chose to use a waypoint to waypoint navigation system that used PID control for both orientation and angle. This
+      method assumes that the robot starts almost correctly at each waypoint and uses PID control to first angle the
+      robot
+      towards the next waypoint and then position control to go straight to it.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Alternate method</h3>
+    <p>
+      Initally, I tried to use localization along with my PID control so that the robot can accurately identify its
+      current position at each step. However, my localization was pretty inaccurate and I was not getting good readings,
+      particularly for the point (5, -3) and the waypoints around it like in Lab 11. Since my localization was not
+      significantly increasing the
+      accuracy I decided to switch to pure PID control and just assume that the robot begins perfectly positioned at
+      each
+      waypoint.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Code Set-Up</h3>
+    <p>
+      First, I implemented a function called get_to_waypoint(dx, dy). This function takes in the difference in the x and
+      y coordinates of the current waypoint the robot is at and the next waypoint it needs to get to. It then
+      "navigates" the robot from the current point to the next. This happens in three main steps. First, PID orientation
+      control is used so that the robot is angled in the direction of the next waypoint. Then, PID position control is
+      used to get the robot to the next waypoint. Finally, I again use PID orientation control to realign the robot to
+      0° so that the whole process can restart. Realigning the robot at the end of each "navigation" helped maintain the
+      accuracy of my PID orientation control. I then added another case called NAVIGATION which loops through each
+      waypoint and calls the function get_to_waypoint() at each step.
+    </p>
+    <div class="image-container">
+      <img src="./images/lab12_code_case.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      To calculate the required angle heading, I used the following equations. For the <code>atan2</code> function, I
+      fixed the
+      coordinate by matching up the orientation of the IMU on the car with the given 0° for the world axes. I use -dy
+      for atan2 to align the 0° of the world axes with the orientation I had put my IMU on the car.
+    </p>
+
+    <div class="equation-block" style="font-family: monospace; background: #f4f4f4; padding: 10px; border-radius: 6px;">
+      float dx = (target_x - start_x) * 304.8;<br>
+      float dy = (target_y - start_y) * 304.8;<br>
+      float target_theta = atan2(-dy, dx) * (180.0 / PI);
+    </div>
+    <p>
+      The equations above compute the direction and distance between the robot's current position and its target
+      waypoint. Below is the code that shows that 3 parts of this function:
+    </p>
+    <div class="image-container">
+      <img src="./images/lab12_code_ori1.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab12_code_pos1.png" alt="ToF readings" class="task-image">
+    </div>
+    <div class="image-container">
+      <img src="./images/lab12_code_ori2.png" alt="ToF readings" class="task-image">
+    </div>
+    <p>
+      For the loops I just estimated the time it would take for my robot to get to the right linear/orientation
+      positions.
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>Results</h3>
+    <p>
+      Once I had all the code set-up I performed a few runs with my robot. The best run is shown below where my robot
+      managed to get to all waypoints but for some reason went in the opposite direction at the last one. I was having
+      consistent issues with the last two waypoints, particularly with orientation PID for the last one. I think it was
+      probably a DMP issue and for the best run I got, my robot just goes in the opposite direcion for this run.
+    </p>
+    <div class="video-container">
+      <iframe width="70%" height="315" src="https://www.youtube.com/embed/n1dO3X9hxew" title="Lab 12 Run">
+      </iframe>
+    </div>
+    <p>
+      Jennie, Lulu and I worked as a team for this lab and were together able to get the above code/run.
+    </p>
+  </section>
+
+
+  <section class="task1">
+    <h3>Conclusion</h3>
+    <p>
+      Overall, this lab was challenging but fun. It was pretty cool to be able to put a semester's worth of work
+      together and see our robots navigate through a map !
+    </p>
+  </section>
+
+  <section class="task1">
+    <h3>References</h3>
+    <p>
+      I referenced Mikayla's work for Lab 12. Lulu, Jennie and I also worked as a team on this lab. We also worked with
+      Aidan, Jorge and Henry to figure out the best approach.
+    </p>
+  </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+2025-04-12 21:01:44,061 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-12 21:01:45,395 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-12 21:01:48,914 | MainThread   | [DEBUG   ] | signal_handler      |: Received SIGTERM
+2025-04-12 21:01:48,915 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-15 14:12:26,286 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-15 14:12:26,892 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-15 14:15:32,963 | MainThread   | [DEBUG   ] | signal_handler      |: Received SIGTERM
+2025-04-15 14:15:32,963 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-20 00:44:37,854 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-20 00:44:38,582 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-20 00:45:45,911 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-20 00:46:02,382 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-20 00:46:02,944 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-20 00:47:08,334 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:47:11,177 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 00:47:31,124 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:47:33,924 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:48:17,387 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:48:20,211 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:48:34,088 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:48:36,913 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:49:23,221 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:49:25,995 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:49:37,267 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:49:40,026 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:50:05,611 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:50:08,389 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:50:28,130 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:50:30,913 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:51:33,513 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:51:36,287 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:52:17,835 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:20,632 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:52:24,177 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:26,951 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 00:52:29,255 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:32,027 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 00:52:33,326 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:36,136 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 00:52:37,433 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:40,203 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 00:52:43,511 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:46,304 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 00:52:52,618 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:52:55,449 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 00:52:57,758 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:00,582 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 00:53:02,870 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:05,667 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 00:53:08,964 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:11,728 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 00:53:15,051 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:17,802 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 00:53:20,121 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:22,978 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:53:26,286 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:29,113 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:53:31,422 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:34,285 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:53:36,580 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:39,401 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:53:42,695 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:45,520 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:53:48,827 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 00:53:51,659 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 00:54:09,393 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-20 19:30:41,159 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-20 19:30:41,845 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-20 19:31:33,933 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:31:36,732 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:32:41,439 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:32:44,199 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:32:52,152 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:32:54,957 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:32:57,242 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:00,044 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:33:01,321 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:04,147 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:33:05,444 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:08,230 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:33:11,535 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:14,321 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:33:20,594 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:23,385 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:33:25,660 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:28,419 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:33:30,690 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:33,458 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:33:36,747 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:39,527 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:33:42,826 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:45,575 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:33:47,880 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:50,677 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:33:53,956 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:33:56,785 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:33:59,073 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:34:01,861 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:34:04,162 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:34:06,913 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:34:10,193 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:34:12,986 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:34:16,263 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:34:19,046 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:37:10,836 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:13,641 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:37:22,655 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:25,460 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:37:27,743 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:30,528 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:37:31,804 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:34,612 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:37:35,890 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:38,716 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:37:41,996 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:44,839 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:37:51,142 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:53,905 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:37:56,190 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:37:58,958 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:38:01,247 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:04,086 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:38:07,381 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:10,138 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:38:13,425 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:16,234 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:38:18,523 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:21,302 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:38:24,582 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:27,371 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:38:29,665 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:32,520 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:38:34,815 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:37,667 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:38:40,963 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:43,755 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:38:47,046 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:38:49,836 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:42:10,248 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:13,060 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:42:19,148 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:21,906 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:42:24,184 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:26,964 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:42:28,250 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:31,029 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:42:32,313 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:35,077 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:42:38,379 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:41,172 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:42:47,468 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:50,230 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:42:52,526 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:42:55,258 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:42:57,549 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:00,319 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:43:03,603 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:06,372 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:43:09,665 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:12,441 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:43:14,742 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:17,557 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:43:20,850 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:23,635 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:43:25,913 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:28,677 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:43:30,967 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:33,752 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:43:37,048 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:39,834 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:43:43,114 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:43:45,894 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:44:08,093 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:10,905 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:44:15,685 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:18,470 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:44:20,759 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:23,527 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:44:24,806 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:27,622 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:44:28,913 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:31,680 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:44:34,979 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:37,782 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:44:44,063 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:46,857 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:44:49,155 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:51,964 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:44:54,260 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:44:57,069 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:45:00,359 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:03,150 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:45:06,446 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:09,245 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:45:11,536 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:14,311 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:45:17,606 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:20,425 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:45:22,711 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:25,532 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:45:27,832 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:30,601 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:45:33,892 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:36,710 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:45:40,002 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:45:42,805 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:47:02,333 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:05,158 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:47:12,299 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:15,106 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:47:17,408 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:20,225 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:47:21,524 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:24,299 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:47:25,593 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:28,426 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:47:31,720 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:34,532 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:47:40,827 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:43,649 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:47:45,934 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:48,750 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:47:51,047 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:53,831 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:47:57,127 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:47:59,903 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:48:03,193 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:05,989 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:48:08,280 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:11,086 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:48:14,355 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:17,205 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:48:19,506 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:22,336 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:48:24,608 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:27,418 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:48:30,708 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:33,509 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:48:36,793 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:48:39,551 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:49:08,889 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:11,645 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:49:21,988 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:24,833 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-20 19:49:27,108 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:29,928 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:49:31,200 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:33,978 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:49:35,265 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:38,054 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:49:41,341 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:44,144 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-20 19:49:50,431 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:53,213 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:49:55,500 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:49:58,321 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:50:00,614 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:03,383 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:50:06,670 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:09,459 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-20 19:50:12,758 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:15,510 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-20 19:50:17,796 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:20,626 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:50:23,926 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:26,706 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:50:29,000 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:31,767 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:50:34,064 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:36,834 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:50:40,119 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:42,908 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 19:50:46,208 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-20 19:50:48,991 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-20 20:16:25,559 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-21 00:49:05,561 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-21 00:49:06,250 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-21 00:49:36,617 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-21 18:52:10,340 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-21 18:52:11,075 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-21 18:53:45,898 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:53:48,704 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 18:53:55,962 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:53:58,795 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-21 18:54:08,950 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:11,777 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-21 18:54:14,066 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:16,896 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 18:54:18,187 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:21,016 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 18:54:22,310 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:25,173 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 18:54:28,471 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:31,275 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 18:54:37,583 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:40,388 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 18:54:42,678 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:45,483 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 18:54:47,784 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:50,597 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 18:54:53,902 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:54:56,718 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 18:55:00,010 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:02,813 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-21 18:55:05,109 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:07,949 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 18:55:11,249 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:14,070 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 18:55:16,368 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:19,199 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 18:55:21,482 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:24,302 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 18:55:27,581 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:30,397 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 18:55:33,691 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 18:55:36,528 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 19:13:26,029 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-21 22:47:12,105 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-21 22:47:12,674 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-21 22:48:06,193 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:08,992 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-21 22:48:14,448 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:17,231 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-21 22:48:19,521 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:22,313 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 22:48:23,599 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:26,372 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 22:48:27,655 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:30,431 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 22:48:33,717 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:36,515 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-21 22:48:42,810 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:45,588 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 22:48:47,881 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:50,668 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 22:48:52,948 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:48:55,780 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 22:48:59,073 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:01,886 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-21 22:49:05,181 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:08,000 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-21 22:49:10,289 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:13,057 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 22:49:16,342 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:19,148 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 22:49:21,436 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:24,225 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 22:49:26,511 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:29,372 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 22:49:32,663 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:35,442 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 22:49:38,726 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-21 22:49:41,515 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-21 23:14:05,746 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully
+2025-04-27 15:08:28,759 | MainThread   | [DEBUG   ] | run                 |: Starting Flatland
+2025-04-27 15:08:29,424 | MainThread   | [DEBUG   ] | __init__            |: | Observations per loop: 18
+2025-04-27 15:08:59,311 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:02,113 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-27 15:09:07,559 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:10,428 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :342.000 deg
+2025-04-27 15:09:12,629 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:15,446 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-27 15:09:16,634 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:19,462 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-27 15:09:20,640 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:23,430 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-27 15:09:26,624 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:29,367 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.998 deg
+2025-04-27 15:09:35,620 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:38,402 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-27 15:09:40,610 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:43,423 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-27 15:09:45,670 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:48,464 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-27 15:09:51,676 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:09:54,515 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.017 deg
+2025-04-27 15:09:57,738 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:00,565 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :340.010 deg
+2025-04-27 15:10:02,781 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:05,615 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:10:08,835 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:11,642 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:10:13,843 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:16,657 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:10:18,861 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:21,636 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:10:24,847 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:27,664 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:10:30,854 | MainThread   | [DEBUG   ] | _create_generator   |: | Executing Observation Loop at 120.000 deg/s
+2025-04-27 15:10:33,659 | MainThread   | [DEBUG   ] | step                |: | Angle diff after obs loop :341.979 deg
+2025-04-27 15:12:49,844 | MainThread   | [DEBUG   ] | run                 |: Exiting gracefully

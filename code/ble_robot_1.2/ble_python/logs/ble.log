@@ -1,0 +1,418 @@
+2025-05-13 22:47:33,528 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-13 22:47:33,530 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-13 22:47:33,539 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-13 22:47:33,541 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-13 22:47:33,543 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-13 22:47:33,792 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 22:47:36,468 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 22:48:52,794 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 22:50:19,785 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-13 22:50:19,786 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-13 22:50:19,787 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-13 22:50:19,788 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-13 22:50:19,789 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-13 22:50:20,068 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 22:50:22,610 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 22:50:45,341 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 22:52:48,776 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 22:52:53,364 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:00:33,878 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:00:52,507 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:01:04,605 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:03:25,667 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:03:28,215 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:04:21,290 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:05:12,555 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:05:18,120 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:05:32,000 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:08:08,885 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:08:11,401 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:08:18,351 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:08:22,120 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:08:30,691 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:08:48,501 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:09:50,467 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:09:55,114 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:10:29,481 | MainThread   | [INFO    ] | _connect            |: Already connected to a BLE device
+2025-05-13 23:44:15,940 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-13 23:44:22,655 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-13 23:44:30,362 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-13 23:45:04,003 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:12:11,471 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:12:11,471 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:12:11,472 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:12:11,473 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:12:11,474 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:12:11,929 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:12:14,481 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:12:35,033 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:12:48,593 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:12:48,593 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:12:48,594 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:12:48,595 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:12:48,597 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:12:48,804 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:12:52,191 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:13:24,912 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:13:39,312 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:13:43,372 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:13:56,142 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:14:46,910 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:14:46,911 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:14:46,912 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:14:46,914 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:14:46,924 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:15:06,108 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:15:10,719 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:15:43,498 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:17:15,430 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:17:15,430 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:17:15,431 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:17:15,432 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:17:15,432 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:17:16,355 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:17:18,849 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:18:24,201 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:18:27,773 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:18:34,029 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:19:44,459 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:20:44,641 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:20:44,642 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:20:44,644 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:20:44,645 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:20:44,646 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:21:03,887 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:21:08,891 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:21:20,055 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:24:34,426 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:24:34,427 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:24:34,428 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:24:34,429 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:24:34,430 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:24:34,795 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:24:37,543 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:24:52,325 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:26:04,697 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:26:04,698 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:26:04,699 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:26:04,700 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:26:04,700 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:26:04,990 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:26:07,469 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:26:27,665 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:26:35,173 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:26:39,104 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:27:46,641 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:27:58,246 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:28:00,826 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:28:33,662 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:32:18,084 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:32:18,085 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:32:18,086 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:32:18,087 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:32:18,088 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:32:18,520 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:32:21,153 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:32:22,167 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:32:34,561 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:32:39,183 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:33:12,069 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:33:48,290 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:33:50,974 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:34:22,568 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:38:33,229 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:38:38,248 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:39:34,265 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:43:35,668 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:43:38,373 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:43:54,517 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:47:12,015 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:47:14,661 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:47:41,140 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:47:50,405 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:47:53,510 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:48:05,366 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:48:16,564 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:48:34,512 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:48:41,061 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:48:52,151 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:51:26,331 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:51:29,333 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:51:46,303 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:51:55,996 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:52:00,999 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:53:09,884 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 00:57:26,475 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 00:57:26,476 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 00:57:26,476 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 00:57:26,477 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 00:57:26,478 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 00:57:35,278 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 00:57:41,637 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 00:57:49,775 | MainThread   | [INFO    ] | _connect            |: Already connected to a BLE device
+2025-05-14 00:58:25,637 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 01:01:31,754 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 01:01:31,755 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 01:01:31,756 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 01:01:31,757 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 01:01:31,758 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 01:01:32,357 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 01:01:34,965 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 01:02:07,820 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 01:07:58,570 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 01:07:58,571 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 01:07:58,572 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 01:07:58,573 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 01:07:58,576 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 01:07:59,396 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 01:08:01,920 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 01:08:16,834 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 01:08:30,894 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 01:08:35,907 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 01:09:17,898 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 01:09:48,502 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 01:09:48,503 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 01:09:48,504 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 01:09:48,506 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 01:09:48,506 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 01:09:48,715 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 01:09:51,868 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 01:10:02,039 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 02:51:39,433 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 02:51:39,435 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 02:51:39,435 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 02:51:39,436 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 02:51:39,436 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 02:51:41,543 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 02:51:44,109 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 02:51:48,627 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 02:51:59,150 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 02:52:02,514 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 02:52:47,623 | MainThread   | [INFO    ] | _connect            |: Already connected to a BLE device
+2025-05-14 02:53:01,291 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 02:53:08,526 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 02:53:11,619 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 02:56:19,060 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 02:57:53,921 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 02:57:56,543 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 02:59:18,445 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 02:59:40,591 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 02:59:40,592 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 02:59:40,593 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 02:59:40,593 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 02:59:40,594 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:00:37,711 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:00:44,272 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:01:43,706 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:02:10,204 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:02:10,204 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:02:10,205 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:02:10,205 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:02:10,206 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:02:10,345 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:02:13,013 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:03:30,658 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:04:21,071 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:04:21,072 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:04:21,073 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:04:21,074 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:04:21,074 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:04:21,380 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:04:26,213 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:05:37,707 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:05:52,440 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:05:52,440 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:05:52,441 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:05:52,442 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:05:52,443 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:05:53,034 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:05:55,705 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:06:02,118 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:06:07,285 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:06:11,980 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:07:32,818 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:08:15,059 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:08:15,060 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:08:15,061 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:08:15,062 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:08:15,062 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:08:15,429 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:08:18,057 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:08:53,932 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:13:04,745 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:13:04,746 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:13:04,747 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:13:04,748 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:13:04,748 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:13:05,064 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:13:09,031 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:14:58,898 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:19:18,736 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:19:18,738 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:19:18,739 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:19:18,739 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:19:18,740 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:19:18,983 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:19:21,566 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:20:42,077 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:21:28,318 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:21:28,320 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:21:28,320 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:21:28,321 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:21:28,322 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:21:28,709 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:21:32,276 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:23:38,765 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:24:04,370 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:24:07,649 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:24:34,022 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:26:02,461 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:26:02,461 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:26:02,462 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:26:02,463 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:26:02,463 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:26:02,680 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:26:07,187 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:28:29,752 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:30:09,073 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:30:12,231 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:31:28,527 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:32:04,374 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:32:06,999 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:38:35,068 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:38:35,069 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:38:35,070 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:38:35,071 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:38:35,071 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:38:35,804 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:38:38,845 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:38:49,535 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:42:48,535 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 03:42:48,536 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 03:42:48,537 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 03:42:48,538 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 03:42:48,539 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 03:42:48,733 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:42:51,976 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:43:17,678 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:45:04,354 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:45:07,144 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:45:32,634 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:48:58,817 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:49:03,534 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:49:22,467 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:50:35,567 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:50:39,536 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:51:06,256 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:53:12,817 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:53:17,023 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:54:37,580 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:55:10,151 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:55:14,416 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:55:51,898 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:58:11,976 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:58:15,634 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 03:58:47,349 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 03:59:44,734 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 03:59:47,346 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:00:13,931 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:02:12,819 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 04:02:12,819 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 04:02:12,820 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 04:02:12,821 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 04:02:12,821 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 04:02:13,056 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:02:17,605 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:02:51,314 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:03:48,597 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 04:03:48,598 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 04:03:48,599 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 04:03:48,600 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 04:03:48,601 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 04:03:48,931 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:03:51,430 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:04:35,776 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:05:44,704 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:05:49,363 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:07:55,170 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:09:16,551 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:09:19,135 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:10:10,380 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:11:04,851 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:11:08,755 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:11:48,735 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:13:05,982 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:13:09,506 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:13:44,297 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:15:35,249 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:15:38,817 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:17:26,371 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:18:03,952 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 04:18:03,952 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 04:18:03,953 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 04:18:03,953 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 04:18:03,954 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 04:21:22,683 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:21:25,696 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:21:57,064 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:25:05,401 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:25:08,718 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:25:39,846 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:28:53,998 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:28:57,442 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:29:42,737 | MainThread   | [INFO    ] | _connect            |: Already connected to a BLE device
+2025-05-14 04:30:58,782 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:31:28,118 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:31:52,520 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:31:57,878 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:32:39,058 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:32:44,818 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:32:49,059 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:33:17,999 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:35:03,666 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 04:35:03,667 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 04:35:03,668 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 04:35:03,669 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 04:35:03,670 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 04:35:13,684 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:35:19,240 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:37:08,882 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:38:11,973 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:38:14,532 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:38:40,172 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:46:03,641 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:46:06,671 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:46:43,952 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:51:55,855 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:52:15,079 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:52:19,804 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:52:54,700 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:58:21,308 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:58:25,056 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 04:58:35,746 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 04:58:45,864 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 04:58:48,725 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 05:00:15,369 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 05:30:21,119 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 05:30:21,121 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 05:30:21,123 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 05:30:21,123 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 05:30:21,124 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 05:32:22,177 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:32:24,692 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 05:32:59,452 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 05:34:22,640 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:34:25,938 | MainThread   | [INFO    ] | _connect            |: Connected to c0:81:e4:22:02:64
+2025-05-14 05:34:59,491 | MainThread   | [INFO    ] | disconnect_handler  |: Disconnected from B9E76412-E4C0-18B7-0B21-A6BEFE645FB5
+2025-05-14 05:36:22,395 | MainThread   | [DEBUG   ] | <module>            |: debug
+2025-05-14 05:36:22,395 | MainThread   | [INFO    ] | <module>            |: info
+2025-05-14 05:36:22,396 | MainThread   | [WARNING ] | <module>            |: warning
+2025-05-14 05:36:22,396 | MainThread   | [ERROR   ] | <module>            |: error
+2025-05-14 05:36:22,397 | MainThread   | [CRITICAL] | <module>            |: critical
+2025-05-14 05:36:23,295 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:36:35,342 | MainThread   | [ERROR   ] | _connect            |: 
+2025-05-14 05:36:36,349 | MainThread   | [WARNING ] | connect             |: Attempting to connect again...
+2025-05-14 05:36:36,352 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:36:49,158 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:37:07,673 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
+2025-05-14 05:37:29,510 | MainThread   | [INFO    ] | _connect            |: Looking for Artemis Nano Peripheral Device: c0:81:e4:22:02:64
